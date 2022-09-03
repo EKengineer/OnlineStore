@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace OnlainStore.Controllers
 {
-    public class calculatorController : Controller
+    public class calcController : Controller
     {
         // GET: HomeController1
-        public string Index(double a, double  b, char c)
+        public string Index(double a, double b, char c)
         {
             switch (c)
             {
                 case '*': return $"{a} * {b} = {a * b}";
-                case '-' : return $"{a} - {b} = {a - b}";
-                default  : return $"{a} + {b} = {a + b}";
+                case '/': return $"{a} / {b} = {a / b}";
+                case '-': return $"{a} - {b} = {a - b}";
+                default: return $"{a} + {b} = {a + b}";
             }
         }
 
