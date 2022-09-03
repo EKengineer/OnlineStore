@@ -38,7 +38,7 @@ namespace OnlainStore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{a?}/{b?}");
+                    pattern: "{controller=Home}/{action=Index}/{a?}/{b?}/{c?}");
             });
         }
     }

@@ -10,9 +10,14 @@ namespace OnlainStore.Controllers
     public class calculatorController : Controller
     {
         // GET: HomeController1
-        public string Index(int a, int b)
+        public string Index(double a, double b, char c)
         {
-            return $"{a} + {b} = {a+b}";
+            switch (c)
+            {
+                case '*': return $"{a} * {b} = {a * b}";
+                case '-' : return $"{a} - {b} = {a - b}";
+                default  : return $"{a} + {b} = {a + b}";
+            }
         }
 
         // GET: HomeController1/Details/5
