@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Store/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Store.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Store.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Store/1.0.0": {
+      "type": "project",
+      "path": "../../domain/Store/Store.csproj",
+      "msbuildProject": "../../domain/Store/Store.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Store >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ek\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
-      "projectName": "OlineStore",
-      "projectPath": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+      "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\Store,Memory.csproj",
+      "projectName": "Store,Memory",
+      "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\Store,Memory.csproj",
       "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-      "outputPath": "E:\\git-project\\OnlainStore\\OnlainStore\\obj\\",
+      "outputPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
+              "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -56,9 +79,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
