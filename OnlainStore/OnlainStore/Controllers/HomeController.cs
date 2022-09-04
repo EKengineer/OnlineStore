@@ -14,9 +14,10 @@ namespace OnlainStore.Controllers
     public class HomeController : Controller
     {
 
-        public Product Index()
+        public string Index()
         {
-            return ProductRepository.ReturnAllProduct();
+            var result = ProductRepository.ReturnAllProduct();
+            return result;
 
         }
 

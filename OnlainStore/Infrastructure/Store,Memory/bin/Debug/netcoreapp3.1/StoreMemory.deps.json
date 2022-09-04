@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StoreMemory/1.0.0": {
+        "dependencies": {
+          "Store": "1.0.0"
+        },
+        "runtime": {
+          "StoreMemory.dll": {}
+        }
+      },
+      "Store/1.0.0": {
+        "runtime": {
+          "Store.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StoreMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Store/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
