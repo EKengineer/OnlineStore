@@ -6,21 +6,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Store;
+using Store_Memory;
 
 namespace OnlainStore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public Product Index()
         {
-            _logger = logger;
-        }
+            return ProductRepository.ReturnAllProduct();
 
-        public IActionResult Index()
-        {
-            return View();
         }
 
         public IActionResult Privacy()

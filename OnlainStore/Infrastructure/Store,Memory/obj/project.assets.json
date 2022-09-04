@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\Store,Memory.csproj",
-      "projectName": "Store,Memory",
-      "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\Store,Memory.csproj",
+      "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+      "projectName": "StoreMemory",
+      "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
       "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
       "outputPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
       "projectStyle": "PackageReference",

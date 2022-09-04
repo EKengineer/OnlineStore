@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Store/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Store.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Store.dll": {}
+        }
+      },
+      "StoreMemory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Store": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StoreMemory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StoreMemory.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Store/1.0.0": {
+      "type": "project",
+      "path": "../domain/Store/Store.csproj",
+      "msbuildProject": "../domain/Store/Store.csproj"
+    },
+    "StoreMemory/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Store,Memory/StoreMemory.csproj",
+      "msbuildProject": "../Infrastructure/Store,Memory/StoreMemory.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Store >= 1.0.0",
+      "StoreMemory >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ek\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
+              "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
+            },
+            "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+              "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

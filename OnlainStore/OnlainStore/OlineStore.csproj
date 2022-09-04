@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\domain\Store\Store.csproj" />
+    <ProjectReference Include="..\Infrastructure\Store,Memory\StoreMemory.csproj" />
+  </ItemGroup>
+
 </Project>
