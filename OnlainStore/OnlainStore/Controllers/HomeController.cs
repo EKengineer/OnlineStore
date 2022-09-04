@@ -16,7 +16,7 @@ namespace OnlainStore.Controllers
 
         public string Index()
         {
-            var result = ProductRepository.ReturnAllProduct();
+            var result = ProductRepository.ReturnAllIdNameCostProduct();
             return result;
 
         }
