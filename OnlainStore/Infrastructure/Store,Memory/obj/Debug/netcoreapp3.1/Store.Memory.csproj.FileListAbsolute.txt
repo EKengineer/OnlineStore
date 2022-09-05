@@ -1,0 +1,13 @@
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.Memory.deps.json
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.Memory.dll
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.Memory.pdb
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.dll
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.pdb
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.csproj.AssemblyReference.cache
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.GeneratedMSBuildEditorConfig.editorconfig
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.AssemblyInfoInputs.cache
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.AssemblyInfo.cs
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.csproj.CoreCompileInputs.cache
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.csproj.CopyComplete
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.dll
+E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\Store.Memory.pdb

@@ -1,0 +1,10 @@
+E:\git-project\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.deps.json
+E:\git-project\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.dll
+E:\git-project\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.pdb
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.csproj.AssemblyReference.cache
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.GeneratedMSBuildEditorConfig.editorconfig
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.AssemblyInfoInputs.cache
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.AssemblyInfo.cs
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.csproj.CoreCompileInputs.cache
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.dll
+E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.pdb

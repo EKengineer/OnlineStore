@@ -11,38 +11,19 @@
         "runtime": {
           "bin/placeholder/Store.dll": {}
         }
-      },
-      "StoreMemory/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Store": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StoreMemory.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StoreMemory.dll": {}
-        }
       }
     }
   },
   "libraries": {
     "Store/1.0.0": {
       "type": "project",
-      "path": "../domain/Store/Store.csproj",
-      "msbuildProject": "../domain/Store/Store.csproj"
-    },
-    "StoreMemory/1.0.0": {
-      "type": "project",
-      "path": "../Infrastructure/Store,Memory/StoreMemory.csproj",
-      "msbuildProject": "../Infrastructure/Store,Memory/StoreMemory.csproj"
+      "path": "../../domain/Store/Store.csproj",
+      "msbuildProject": "../../domain/Store/Store.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Store >= 1.0.0",
-      "StoreMemory >= 1.0.0"
+      "Store >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -51,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
-      "projectName": "OlineStore",
-      "projectPath": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+      "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+      "projectName": "StoreMemory",
+      "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
       "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-      "outputPath": "E:\\git-project\\OnlainStore\\OnlainStore\\obj\\",
+      "outputPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,9 +55,6 @@
           "projectReferences": {
             "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
               "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
-            },
-            "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
-              "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
             }
           }
         }
@@ -101,9 +79,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
