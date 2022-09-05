@@ -10,10 +10,16 @@ namespace OlineStore.Controllers
 {
     public class ProductController : Controller
     {
-        // GET: ProductController
+        private readonly ProductRepository productRepository;
+
+        public ProductController()
+        {
+            productRepository = new ProductRepository();
+        }
+
         public string Index(int id)
         {
-            var result = ProductRepository.ReturnIdNameCostDescriptionProduct(id);
+            var result = productRepository.ReturnIdNameCostDescriptionProduct(id);
             return result;
 
         }
