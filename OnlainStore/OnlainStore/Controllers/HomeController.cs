@@ -13,10 +13,16 @@ namespace OnlainStore.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ProductRepository productRepository;
 
+        public HomeController()
+        {
+            productRepository = new ProductRepository();
+        }
         public string Index()
         {
-            var result = ProductRepository.ReturnAllIdNameCostProduct();
+            var result = productRepository.ReturnAllIdNameCostProduct();
+
             return result;
 
         }
