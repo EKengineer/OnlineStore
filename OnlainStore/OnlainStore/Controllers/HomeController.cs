@@ -19,14 +19,13 @@ namespace OnlainStore.Controllers
         {
             productRepository = new ProductRepository();
         }
-        public string Index()
+        public IActionResult Index()
         {
-            var result = productRepository.ReturnAllIdNameCostProduct();
+            var result = productRepository.GetAllProduct();
 
-            return result;
-
+            return View(result);
         }
-
+         
         public IActionResult Privacy()
         {
             return View();

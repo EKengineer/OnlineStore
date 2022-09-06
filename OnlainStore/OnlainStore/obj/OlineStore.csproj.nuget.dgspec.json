@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj": {}
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj": {}
   },
   "projects": {
-    "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj",
+        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj",
         "projectName": "Store",
-        "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj",
+        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj",
         "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "E:\\git-project\\OnlainStore\\domain\\Store\\obj\\",
+        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,14 +61,14 @@
         }
       }
     },
-    "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
         "projectName": "StoreMemory",
-        "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
         "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
+        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +85,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
-                "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
+              "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj": {
+                "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj"
               }
             }
           }
@@ -119,14 +119,14 @@
         }
       }
     },
-    "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj": {
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj",
         "projectName": "OlineStore",
-        "projectPath": "E:\\git-project\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj",
         "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "E:\\git-project\\OnlainStore\\OnlainStore\\obj\\",
+        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,11 +143,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
-                "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
+              "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj": {
+                "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj"
               },
-              "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
-                "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
+              "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+                "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
               }
             }
           }

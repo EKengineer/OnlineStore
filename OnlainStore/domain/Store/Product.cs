@@ -9,6 +9,7 @@ namespace Store
         public string Name { get; }
         public decimal Cost { get; }
         public string Description { get; }
+        
 
         public Product (string name, decimal cost, string description)
         {
@@ -16,7 +17,6 @@ namespace Store
             Name = name;
             Cost = cost;
             Description = description;
-
             instCounter += 1;
 
         }

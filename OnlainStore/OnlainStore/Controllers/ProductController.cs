@@ -17,10 +17,10 @@ namespace OlineStore.Controllers
             productRepository = new ProductRepository();
         }
 
-        public string Index(int id)
+        public IActionResult Index(int id)
         {
             var result = productRepository.ReturnIdNameCostDescriptionProduct(id);
-            return result;
+            return View(result);
 
         }
 

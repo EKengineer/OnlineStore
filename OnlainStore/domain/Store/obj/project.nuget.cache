@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XxDD6WVTKKlYZYtGUmm8jikRNwpKje1j2DoF3V78b5WNWbp0Meoi7WFKFCYUrYEvZdLysuqXDgus/D+U4BQpwQ==",
+  "dgSpecHash": "/jcG32dXEatfcaZcgRsvlcYK0VzlobtTGvz2jYth12OKZN9yCnXhg3ioGPMFao3EvJEDVZXI9vNewT6pSfrKoQ==",
   "success": true,
-  "projectFilePath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj",
+  "projectFilePath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
