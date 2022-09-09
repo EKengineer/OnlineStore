@@ -1,5 +1,7 @@
 ﻿using Store;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Store_Memory
 {
@@ -11,6 +13,15 @@ namespace Store_Memory
             new Product("Sony PS5", 55000, "Home video game console"),
             new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
         };
+
+        public Product[] GetAllbiIds(IEnumerable<int> productIds)
+        {
+            var faundProduct = from product in products
+                               join productId in productIds on product.Id equals productId
+                               select product;
+
+            return faundProduct.ToArray();
+        }
 
         public Product[] GetAllProduct()
         {

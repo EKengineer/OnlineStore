@@ -17,11 +17,11 @@
         <div class="col-4 card shadow">
             <img class="card-img-top" src="~/css/images/unnamed.jpg" />
             <div class="card-body">
-                <a style="color:blue" href="/product/index/@product.Id">
+                <a style="color: black" href="/product/index/@product.Id">
                     <h5>@product.Name</h5>
                 </a>
                 <h5>@product.Cost руб </h5>
-                <a class="btn btn-dark" href="#" role="button">В корзину</a> 
+                <a class="btn btn-info" href="/Order/AddItem/@product.Id" role="button">В корзину</a>
             </div>
         </div>
     }
