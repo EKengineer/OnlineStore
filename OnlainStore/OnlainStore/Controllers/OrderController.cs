@@ -86,7 +86,66 @@ namespace OlineStore.Controllers
             
             HttpContext.Session.Set(cart);
 
-            return RedirectToAction("Index", "Product", new { id });
+            return RedirectToAction("Index", "Order");
         }
+
+        public IActionResult ReduceItem(int id)
+        {
+
+
+            Order order;
+            Cart cart;
+
+            if (HttpContext.Session.TryGetCart(out cart))
+            {
+                order = orderRepository.GetById(cart.OrderId);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Order");
+            }
+
+            var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+
+            order.ReduceItem(produc, 1);
+            orderRepository.Update(order);
+
+            cart.TotalPrice = order.TotalPrice;
+            cart.TotalCount = order.TotalCount;
+
+            HttpContext.Session.Set(cart);
+
+            return RedirectToAction("Index", "Order");
+        }
+
+        public IActionResult RemoveItem(int id)
+        {
+
+
+            Order order;
+            Cart cart;
+
+            if (HttpContext.Session.TryGetCart(out cart))
+            {
+                order = orderRepository.GetById(cart.OrderId);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Order");
+            }
+
+            var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+
+            order.RemoveItem(produc);
+            orderRepository.Update(order);
+
+            cart.TotalPrice = order.TotalPrice;
+            cart.TotalCount = order.TotalCount;
+
+            HttpContext.Session.Set(cart);
+
+            return RedirectToAction("Index", "Order");
+        }
+        
     }
 }

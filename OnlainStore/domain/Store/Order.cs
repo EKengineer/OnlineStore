@@ -50,6 +50,34 @@ namespace Store
                 items.Add(new OrderItem(product.Id, item.Count + count, product.Cost));
             }
         }
+        public void ReduceItem(Product product, int count)
+        {
+            var item = items.SingleOrDefault(x => x.ProductId == product.Id);
+
+            if (item != null)
+            {
+                if (item.Count <= 1)
+                {
+                    items.Remove(item);
+                }
+                else
+                {
+                    items.Remove(item);
+                    items.Add(new OrderItem(product.Id, item.Count - count, product.Cost));
+                }
+            }
+        }
+
+        public void RemoveItem(Product product)
+        {
+            var item = items.SingleOrDefault(x => x.ProductId == product.Id);
+
+            if (item != null)
+            {
+                    items.Remove(item);
+            }
+        }
+        
 
     }
 }

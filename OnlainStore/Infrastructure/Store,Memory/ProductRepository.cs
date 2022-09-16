@@ -10,7 +10,7 @@ namespace Store_Memory
         private static readonly Product[] products = new[]
         {
             new Product("Iphone 13 Pro Max", 125000, "512 gb"),
-            new Product("Sony PS5", 55000, "Home video game console"),
+            new Product("Sony PS5", 55000, "Video game console"),
             new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
         };
 
