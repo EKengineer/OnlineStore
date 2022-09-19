@@ -26,17 +26,17 @@ namespace OnlainStore
         {
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
-            services.AddSession(options => 
-            {
-                //Время жизни сессии
-                options.IdleTimeout = TimeSpan.FromMinutes(20);
-                //Доступ к кукам только у сервера(защита от атак)
-                options.Cookie.HttpOnly = true;
-                //техническа информация
-                options.Cookie.IsEssential = true;
-            });
-
+            //services.AddSession(options => 
+            //{
+            //    //Время жизни сессии
+            //    options.IdleTimeout = TimeSpan.FromMinutes(20);
+            //    //Доступ к кукам только у сервера(защита от атак)
+            //    options.Cookie.HttpOnly = true;
+            //    options.Cookie.IsEssential = true;
+            //});
             services.AddSingleton<IOrderRepositoty, OrderRepository>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<ICartRepositoty, CartRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,8 +49,6 @@ namespace OnlainStore
             app.UseRouting();
 
             app.UseAuthorization();
-            //для работы сессий
-            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

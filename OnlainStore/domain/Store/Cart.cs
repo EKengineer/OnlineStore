@@ -6,12 +6,14 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Store
 {
-    public class Order
+    public class Cart
     {
         public int Id { get; }
 
-        private List<OrderItem> items;
-        public  IReadOnlyCollection<OrderItem> Items
+        public string UserId { get; set; }
+
+        private List<CartItem> items;
+        public  IReadOnlyCollection<CartItem> Items
         {
             get { return items; }
         }
@@ -26,14 +28,16 @@ namespace Store
             get { return items.Sum(item => item.Price * item.Count); }
         }
 
-        public Order(int id, IEnumerable<OrderItem> itams)
+        public Cart(int id, IEnumerable<CartItem> itams, string userId)
         {
             if (itams == null)
                 throw new ArgumentNullException(nameof(itams));
 
             Id = id;
 
-            this.items = new List<OrderItem>(itams);
+            UserId = userId;
+
+            this.items = new List<CartItem>(itams);
         }
 
         public void AddItem(Product product, int count)
@@ -42,12 +46,12 @@ namespace Store
 
             if (item == null)
             {
-                items.Add(new OrderItem(product.Id, count, product.Cost));
+                items.Add(new CartItem(product.Id, count, product.Cost, product.Name));
             }
             else
             {
                 items.Remove(item);
-                items.Add(new OrderItem(product.Id, item.Count + count, product.Cost));
+                items.Add(new CartItem(product.Id, item.Count + count, product.Cost, product.Name));
             }
         }
         public void ReduceItem(Product product, int count)
@@ -63,7 +67,7 @@ namespace Store
                 else
                 {
                     items.Remove(item);
-                    items.Add(new OrderItem(product.Id, item.Count - count, product.Cost));
+                    items.Add(new CartItem(product.Id, item.Count - count, product.Cost, product.Name));
                 }
             }
         }

@@ -8,26 +8,14 @@ namespace Store_Memory
 {
     public class OrderRepository : IOrderRepositoty
     {
-        private readonly List<Order> orders = new List<Order>();
+        private readonly List<Cart> orders = new List<Cart>();
 
-        public Order Create()
-        {
-            int nexrId = orders.Count + 1;
-            var order = new Order(nexrId, new OrderItem[0]);
-
-            orders.Add(order);
-
-            return order;
-        }
-
-        public Order GetById(int id)
-        {
-            return orders.Single(order => order.Id == id);
-        }
-
-        public void Update(Order order)
+        public void Add(Cart cart)
         {
 
+            this.orders.Add(cart);
+
         }
+
     }
 }

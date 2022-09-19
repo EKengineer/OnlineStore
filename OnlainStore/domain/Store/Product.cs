@@ -9,14 +9,17 @@ namespace Store
         public string Name { get; }
         public decimal Cost { get; }
         public string Description { get; }
-        
+        public string Link { get; }
 
-        public Product (string name, decimal cost, string description)
+
+
+        public Product (string name, decimal cost, string description, string link)
         {
             Id = instCounter;
             Name = name;
             Cost = cost;
             Description = description;
+            Link = link;
             instCounter += 1;
 
         }

@@ -12,13 +12,14 @@
     <div class="col-4">
     </div>
         <div class="col-4 card shadow">
-            <img class="card-img-top" src="~/css/images/unnamed.jpg" />
+        <img class="card-img-top" src="@Model.Link" />
             <div class="card-body">
-                <a style="color:blue" href="/product/index/@Model.Id">
+                <a style="color:black" >
                     <h5>@Model.Name</h5>
+                    <h6>@Model.Description</h6>
                 </a>
                 <h5>@Model.Cost руб </h5>
-            <a class="btn btn-info" href="/Order/AddItem/@Model.Id" role="button">В корзину</a>   <a class="btn btn-info" href="/Home/index" role="button">Продолжить покупки</a>
+            <a class="btn btn-info" href="/Cart/AddItem/@Model.Id" role="button">В корзину</a>   <a class="btn btn-info" href="/Home/index" role="button">Продолжить покупки</a>
             </div>
         </div>
 

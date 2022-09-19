@@ -5,13 +5,13 @@ using System.Linq;
 
 namespace Store_Memory
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
-        private static readonly Product[] products = new[]
+        private  readonly Product[] products = new[]
         {
-            new Product("Iphone 13 Pro Max", 125000, "512 gb"),
-            new Product("Sony PS5", 55000, "Video game console"),
-            new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
+            new Product("Iphone 13 Pro Max", 125000, "512 gb", "/images/iphone.jpg"),
+            new Product("Sony PS5", 55000, "Video game console", "/images/ps5.jpg"),
+            new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy", "/images/warandpeace.jpg")
         };
 
         public Product[] GetAllbiIds(IEnumerable<int> productIds)
@@ -31,7 +31,7 @@ namespace Store_Memory
         {
             var result = "";
 
-            for (int i = 0; i < ProductRepository.products.Length; i++)
+            for (int i = 0; i < products.Length; i++)
             {
                 result += products[i] + "\n\n";
             }

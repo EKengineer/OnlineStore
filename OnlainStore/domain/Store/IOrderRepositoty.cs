@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Store;
 
-namespace Store
+namespace Store_Memory
 {
     public interface IOrderRepositoty
     {
-        Order Create();
-
-        Order GetById(int id);
-
-        void Update(Order order);
-
+        void Add(Cart cart);
     }
 }
