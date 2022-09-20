@@ -20,7 +20,7 @@ namespace Store
 
         public int TotalCount
         {
-            get { return items.Sum(item => item.Count); }
+            get { return items?.Sum(item => item.Count) ?? 0; }
         }
 
         public decimal TotalPrice

@@ -2,9 +2,6 @@
 @using System;
 @model Product[];
 
-@{
-    ViewData["Title"] = "Home Page";
-}
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 </div>
@@ -21,7 +18,7 @@
                     <h5>@product.Name</h5>
                 </a>
                 <h5>@product.Cost руб </h5>
-                <a class="btn btn-info" href="/Cart/AddItem/@product.Id" role="button">В корзину</a>
+                <a class="btn btn-primary" href="/Cart/AddItem/@product.Id" role="button">В корзину</a>
             </div>
         </div>
     }

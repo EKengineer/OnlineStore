@@ -26,7 +26,17 @@ namespace OnlainStore.Controllers
 
             return View(result);
         }
-         
+        [HttpPost]
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+        
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

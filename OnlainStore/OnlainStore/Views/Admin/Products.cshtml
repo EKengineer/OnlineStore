@@ -1,0 +1,33 @@
+﻿@model Product[]
+
+<h1 class="text-center">Список продуктов</h1>
+<a class="btn btn-primary" href="#" role="button">Добавить новый продукт</a>
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Название</th>
+            <th scope="col">Цена</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+
+                <td>@product.Id</td>
+                <td class="text-left">@product.Name</td>
+                <td class="text-left">@product.Cost</td>
+                <td class="text-center">
+                    <a class="btn btn-primary" href="#" role="button">Редактировать</a>
+                </td>
+                <td class="text-left">
+                    <a class="btn btn-danger" href="#" role="button">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
