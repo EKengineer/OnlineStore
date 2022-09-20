@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OlineStore.Models;
 using Store;
 
 namespace OlineStore.Controllers
@@ -30,6 +31,14 @@ namespace OlineStore.Controllers
             var products = productRepository.GetAllProduct();
 
             return View(products);
+        }
+
+        [HttpPost]
+        public IActionResult AddProduct(AddNewProduct addNewProduct)
+        {
+            productRepository.AddNewProduct(addNewProduct.Name, addNewProduct.Cost, addNewProduct.Description);
+
+             return RedirectToAction("Products", "Admin");
         }
     }
 }

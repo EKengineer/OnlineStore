@@ -2,57 +2,42 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Numerics;
+using System.Xml.Linq;
 
 namespace Store_Memory
 {
     public class ProductRepository : IProductRepository
     {
 
-        private  readonly Product[] products = new[]
+        private  readonly List<Product> products = new List<Product>
         {
-            new Product("Iphone 13 Pro Max", 125000, "512 gb", "/images/iphone.jpg"),
-            new Product("Sony PS5", 55000, "Video game console", "/images/ps5.jpg"),
-            new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy", "/images/warandpeace.jpg")
+            new Product("Iphone 13 Pro Max", 125000, "512 gb"),
+            new Product("Sony PS5", 55000, "Video game console"),
+            new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
         };
 
-        public Product[] GetAllbiIds(IEnumerable<int> productIds)
+        public void AddNewProduct(string name,decimal cost,string description)
         {
-            var faundProduct = from product in products
-                               join productId in productIds on product.Id equals productId
-                               select product;
+            Product product = new Product(name, cost, description);
 
-            return faundProduct.ToArray();
+            products.Add(product);
+
         }
 
-        public Product[] GetAllProduct()
+        public List<Product> GetAllByProductName(string name)
+        {
+            return products.Where(product => product.Name.Contains(name)).ToList();
+        }
+
+        public List<Product> GetAllProduct()
         {
             return products;
         }
-        public string ReturnAllIdNameCostProduct()
-        {
-            var result = "";
-
-            for (int i = 0; i < products.Length; i++)
-            {
-                result += products[i] + "\n\n";
-            }
-
-            return result;
-        }
-
         public Product ReturnIdNameCostDescriptionProduct(int id)
         {
-            Product result = null;
-            for (int i = 0; i < products.Length; i++)
-            {
-                if (products[i].Id == id)
-                {
-                    result = products[i]; 
-                }    
-                
-            }
-
-            return result;
+            return products.Single(product => product.Id == id);
         }
     }
 }

@@ -6,12 +6,11 @@ namespace Store
 {
     public interface IProductRepository
     {
-        Product[] GetAllbiIds(IEnumerable<int> productIds);
+        void AddNewProduct(string name, decimal cost, string description);
 
+        List<Product> GetAllByProductName(string name);
 
-        Product[] GetAllProduct();
-
-        string ReturnAllIdNameCostProduct();
+        List<Product> GetAllProduct();
 
 
         Product ReturnIdNameCostDescriptionProduct(int id);

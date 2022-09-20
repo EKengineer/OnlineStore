@@ -13,13 +13,13 @@ namespace Store
 
 
 
-        public Product (string name, decimal cost, string description, string link)
+        public Product (string name, decimal cost, string description)
         {
             Id = instCounter;
             Name = name;
             Cost = cost;
             Description = description;
-            Link = link;
+            Link =  $"/images/image{Id}.jpg";
             instCounter += 1;
 
         }
