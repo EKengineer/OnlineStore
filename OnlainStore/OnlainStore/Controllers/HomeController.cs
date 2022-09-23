@@ -26,11 +26,7 @@ namespace OnlainStore.Controllers
 
             return View(result);
         }
-        public IActionResult SignUp()
-        {
 
-            return View();
-        }
         public IActionResult Privacy()
         {
             return View();

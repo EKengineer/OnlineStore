@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ZuJKElvYs0P6vrm0LREw6Ib1LoMCBxRyJp8zEjoiCAs6v2My934vJyNPZ2fo4eQhPQW61cnb7AVx3USEQ4aSg==",
+  "dgSpecHash": "/OmjRIAT9e+QA72MwJoQzbDPw+ExNVq6l9l47FcPS6JqhckBrgP9/vHu7KfUv5Etj4N7ZjXqFVW3GO53J1G9Ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+  "projectFilePath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ek\\.nuget\\packages\\languageext.core\\4.2.9\\languageext.core.4.2.9.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\maxmind.db\\4.0.0\\maxmind.db.4.0.0.nupkg.sha512",

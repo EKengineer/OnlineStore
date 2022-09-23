@@ -20,48 +20,55 @@ using OnlainStore;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
-using OnlainStore.Models;
+using OlineStore.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
-using OlineStore;
+using OnlainStore.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
-using Store;
+using OlineStore;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
-using Store_Memory;
+using Store;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
-using System;
+using Store_Memory;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
+using System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e159d517aab53cf65ef15cf24cc753cffbfb34d3", @"/Views/Admin/Products.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"21acfd4f1cceb25e8af64608522c202f3f33ce81", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a11f5182d4a1088deeaa1c6e6a5ab5a9464da4d", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Admin_Products : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Product>>
     #nullable disable
@@ -106,7 +113,7 @@ using Microsoft.AspNetCore.Http;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n<h1 class=\"text-center\">Список продуктов</h1>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#AddNewProduct\">\r\n    Добавить новый продукт\r\n</button>\r\n\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d38964", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d39157", async() => {
                 WriteLiteral(@"
     <div class=""modal-dialog"">
         <div class=""modal-content"">
@@ -115,7 +122,7 @@ using Microsoft.AspNetCore.Http;
             </div>
             <div class=""modal-body"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d39504", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d39697", async() => {
                     WriteLiteral(@"
                     <div class=""form-group"">
                         <label>Название товара</label>
@@ -145,7 +152,7 @@ using Microsoft.AspNetCore.Http;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d311623", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d311816", async() => {
                     WriteLiteral("Добавить");
                 }
                 );
@@ -239,7 +246,7 @@ using Microsoft.AspNetCore.Http;
                         Редактировать
                     </button>
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d316655", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d316848", async() => {
                 WriteLiteral(@"
                         <div class=""modal-dialog"">
                             <div class=""modal-content"">
@@ -248,7 +255,7 @@ using Microsoft.AspNetCore.Http;
                                 </div>
                                 <div class=""modal-body"">
                                     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d317325", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d317518", async() => {
                     WriteLiteral(@"
                                         <div class=""form-group"">
                                             <label>Название товара</label>
@@ -278,7 +285,7 @@ using Microsoft.AspNetCore.Http;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d319772", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e159d517aab53cf65ef15cf24cc753cffbfb34d319965", async() => {
                     WriteLiteral("Внести изменения");
                 }
                 );
