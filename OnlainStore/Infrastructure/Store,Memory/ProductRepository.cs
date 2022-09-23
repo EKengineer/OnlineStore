@@ -1,38 +1,57 @@
 ﻿using Store;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Numerics;
+using System.Xml.Linq;
 
 namespace Store_Memory
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
-        private static readonly Product[] products = new[]
+
+        private  readonly List<Product> products = new List<Product>
         {
             new Product("Iphone 13 Pro Max", 125000, "512 gb"),
-            new Product("Sony PS5", 55000, "Home video game console"),
-            new Product("Book War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
+            new Product("Sony PS5", 55000, "Video game console"),
+            new Product("War and Peace", 1500, "Literary work by the Russian author Leo Tolstoy")
         };
 
-        public string ReturnAllIdNameCostProduct()
+        public void AddNewProduct(string name,decimal cost,string description)
         {
-            var result = "";
+            Product product = new Product(name, cost, description);
 
-            for (int i = 0; i < ProductRepository.products.Length; i++)
-            {
-                result += products[i] + "\n\n";
-            }
+            products.Add(product);
 
-            return result;
+
+        }
+        public void EditProduct(int id ,string name, decimal cost, string description)
+        {
+            Product product = new Product(id,name, cost, description);
+
+            products.Add(product);
+
+
+        }
+        public void RemuveProductById(int productId)
+        {
+            var product = products.Single(product => product.Id == productId);
+            products.Remove(product);
         }
 
-        public string ReturnIdNameCostDescriptionProduct(int id)
+        public List<Product> GetAllByProductName(string name)
         {
-            var result = "";
+            return products.Where(product => product.Name.Contains(name)).ToList();
+        }
 
-
-                result += products[id-1].ToString2();
-            
-
-            return result;
+        public List<Product> GetAllProduct()
+        {
+            return products;
+        }
+        public Product GetProductById(int id)
+        {
+            return products.Single(product => product.Id == id);
         }
     }
 }

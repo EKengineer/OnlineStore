@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {}
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {}
   },
   "projects": {
-    "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj",
+        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj",
         "projectName": "Store",
-        "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj",
+        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj",
         "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "E:\\git-project\\OnlainStore\\domain\\Store\\obj\\",
+        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,22 +53,23 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
         "projectName": "StoreMemory",
-        "projectPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
         "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
+        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +86,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj": {
-                "projectPath": "E:\\git-project\\OnlainStore\\domain\\Store\\Store.csproj"
+              "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj": {
+                "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\domain\\Store\\Store.csproj"
               }
             }
           }
@@ -106,7 +107,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -115,7 +117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

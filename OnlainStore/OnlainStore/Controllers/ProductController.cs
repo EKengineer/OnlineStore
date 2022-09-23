@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Store;
 using Store_Memory;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,17 @@ namespace OlineStore.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ProductRepository productRepository;
+        private readonly IProductRepository productRepository;
 
-        public ProductController()
+        public ProductController(IProductRepository productRepository)
         {
-            productRepository = new ProductRepository();
+            this.productRepository = productRepository;
         }
 
-        public string Index(int id)
+        public IActionResult Index(int id)
         {
-            var result = productRepository.ReturnIdNameCostDescriptionProduct(id);
-            return result;
+            var result = productRepository.GetProductById(id);
+            return View(result);
 
         }
 

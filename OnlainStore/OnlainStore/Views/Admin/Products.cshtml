@@ -1,0 +1,100 @@
+﻿@model List<Product>
+
+<h1 class="text-center">Список продуктов</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddNewProduct">
+    Добавить новый продукт
+</button>
+
+
+<form method="post" class="modal fade" id="AddNewProduct" tabindex="-1" aria-labelledby="AddNewProduct" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AddNewProduct">Добавить новый продукт</h5>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="form-group">
+                        <label>Название товара</label>
+                        <input type="text" class="form-control" name="Name" placeholder="Название">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Стоимость</label>
+                        <input type="text" class="form-control" name="Cost" placeholder="Стоимость">
+                    </div>
+                    <div class="form-group">
+                        <label>Описание товара</label>
+                        <input type="text" class="form-control" name="Description" placeholder="Описание">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" asp-controller="Admin" asp-action="AddProduct">Добавить</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Название</th>
+            <th scope="col">Цена</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+
+                <td>@product.Id</td>
+                <td class="text-left">@product.Name</td>
+                <td class="text-left">@product.Cost</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditProduct">
+                        Редактировать
+                    </button>
+                    <form method="post" class="modal fade" id="EditProduct" tabindex="-1" aria-labelledby="EditProduct" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="EditProduct">Редактировать</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Название товара</label>
+                                            <input type="text" class="form-control" name="ProductName" placeholder="Название">
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Стоимость</label>
+                                            <input type="text" class="form-control" name="Cost" placeholder="Стоимость">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Описание товара</label>
+                                            <input type="text" class="form-control" name="Description" placeholder="Описание">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary" asp-controller="Admin" asp-action="EditProduct" asp-route-id="@product.Id">Внести изменения</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </td>
+                <td class="text-left">
+                    <a class="btn btn-danger" href="/Admin/RemoveProduct/@product.Id" role="button">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

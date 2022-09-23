@@ -8,3 +8,13 @@ E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.AssemblyI
 E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.csproj.CoreCompileInputs.cache
 E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.dll
 E:\git-project\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.pdb
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.deps.json
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\bin\Debug\netstandard2.0\Store.pdb
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.csproj.AssemblyReference.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.AssemblyInfoInputs.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.AssemblyInfo.cs
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.csproj.CoreCompileInputs.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\domain\Store\obj\Debug\netstandard2.0\Store.pdb

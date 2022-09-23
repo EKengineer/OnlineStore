@@ -1,0 +1,31 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+<h1 class="text-center">Заказ оформлен</h1>
+
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ФИО</th>
+            <th scope="col">Телефон</th>
+            <th scope="col">Адрес доставки</th>
+            <th scope="col">Общая стоимость</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td class="text-left">@Model.Name</td>
+                <td class="text-left">@Model.Phone</td>
+                <td class="text-left">@Model.Address</td>
+                <td class="text-left">@Model.Cart.TotalPrice</td>
+
+            </tr>
+        
+    </tbody>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="/Home/index" role="button">Продолжить покупки</a>
+</div>

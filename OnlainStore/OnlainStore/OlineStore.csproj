@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LanguageExt.Core" Version="4.2.9" />
+    <PackageReference Include="MaxMind.Db" Version="4.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\domain\Store\Store.csproj" />
     <ProjectReference Include="..\Infrastructure\Store,Memory\StoreMemory.csproj" />
   </ItemGroup>

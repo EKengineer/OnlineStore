@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8j58oLxpBN7lhRgCvsxsXaX6nLocvYkGqwFRcUThjvf4enX8dqcw0HJojbWi6zxt8NxbnXujCofkHMm4rVUdnQ==",
+  "dgSpecHash": "ZZ0Knb6kmLH4HwVgqU6dpHClWi1a8HasBlRqR70O2XUlLmCf/NlDK+GCk+PoG2gKPtOqyzzj4YoGjSRglNLgnA==",
   "success": true,
-  "projectFilePath": "E:\\git-project\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+  "projectFilePath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

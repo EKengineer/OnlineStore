@@ -1,0 +1,54 @@
+﻿@model Cart
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+<h1>Корзина</h1>
+
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Товар</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Количество</th>
+            <th scope="col">Стоимоить</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+
+                <td>@item.ProductName</td>
+                <td class="text-left">@item.Price</td>
+                <td class="text-left">@item.Count</td>
+                <td class="text-left">@item.TotalPrice</td>
+                <td class="text-center">
+                    <a class="btn btn-success" href="/Cart/AddItem/@item.ProductId" role="button">+</a>
+                    <a class="btn btn-danger" href="/Cart/ReduceItem/@item.ProductId" role="button">-</a>
+                </td>
+                <td class="text-left">
+                    <a class="btn btn-danger" href="/Cart/RemoveItem/@item.ProductId" role="button">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td class="text-right">Итого </td>
+            <td class="text-left">@Model.TotalCount</td>
+            <td class="text-left">@Model.TotalPrice</td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a class="btn btn-primary" href="/Home/index" role="button">Продолжить покупки</a>
+    <a class="btn btn-success" href="/Order/index" role="button">Оформить заказ</a>
+    <a class="btn btn-danger" href="/Cart/clear" role="button">Удалить</a>
+</div>
+
+

@@ -1,0 +1,12 @@
+﻿@model int
+
+@{
+    if(Model == 0)
+    {
+        <a class="btn btn-primary" href="/Cart/Index" role="button">Корзина</a>
+    }
+    else
+    {
+        <a class="btn btn-primary" href="/Cart/Index" role="button">Корзина  @Model</a>
+    }
+}

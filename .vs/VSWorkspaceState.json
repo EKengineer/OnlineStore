@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OnlainStore",
+    "\\OnlainStore\\domain",
+    "\\OnlainStore\\domain\\Store",
+    "\\OnlainStore\\Infrastructure",
+    "\\OnlainStore\\Infrastructure\\Store,Memory",
+    "\\OnlainStore\\OnlainStore"
+  ],
+  "SelectedNode": "\\OnlainStore\\OnlainStore\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

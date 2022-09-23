@@ -11,3 +11,16 @@ E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\S
 E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.csproj.CopyComplete
 E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.dll
 E:\git-project\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.pdb
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\StoreMemory.deps.json
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\StoreMemory.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\StoreMemory.pdb
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\bin\Debug\netcoreapp3.1\Store.pdb
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.csproj.AssemblyReference.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.AssemblyInfoInputs.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.AssemblyInfo.cs
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.csproj.CoreCompileInputs.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.csproj.CopyComplete
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\Infrastructure\Store,Memory\obj\Debug\netcoreapp3.1\StoreMemory.pdb
