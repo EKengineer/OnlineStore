@@ -1,0 +1,26 @@
+﻿
+<li class="nav-item dropdown ml-2">
+    <div class="btn-group dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+            Регистрация
+        </button>
+        <form method="post" class="dropdown-menu dropdown-menu-dark px-4 py-3">
+            <div class="mb-3">
+                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                <input type="email" name="UserName" class="form-control" placeholder="email@example.com" required minlength="3" maxlength="25">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                <input type="password" name="Password" class="form-control" placeholder="Password" required minlength="4">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                <input type="password" name="ConfirmPassword" class="form-control" placeholder="Password" required minlength="4">
+            </div>
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <button type="submit" class="btn btn-primary" asp-controller="Accaunt" asp-action="SignUp">Зарегистрироваться</button>
+            <div class="dropdown-divider"></div>
+        </form>
+
+    </div>
+</li>

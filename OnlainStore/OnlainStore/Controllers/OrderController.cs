@@ -2,7 +2,7 @@
 using OlineStore.Models;
 using Store;
 using Store_Memory;
-using Order = OlineStore.Models.Order;
+using Orders = OlineStore.Models.Orders;
 
 namespace OlineStore.Controllers
 {
@@ -23,15 +23,21 @@ namespace OlineStore.Controllers
         }
 
         [HttpPost]
-            public IActionResult Buy(Order order)
+            public IActionResult Buy(Orders order)
         {
-            var cart = cartRepository.GetByUserId(Constants.UserId);
+            if (ModelState.IsValid)
+            {
 
-            orderRepositoty.Add(order.Name,order.Phone, order.Address, cart);
-            cartRepository.Clear(Constants.UserId);
 
-             var orders = orderRepositoty.GetByUseID(Constants.UserId);
-            return View(orders);
+                var cart = cartRepository.GetByUserId(Constants.UserId);
+
+                orderRepositoty.Add(order.Name, order.Phone, order.Address, cart);
+                cartRepository.Clear(Constants.UserId);
+
+                var orders = orderRepositoty.GetByUseID(Constants.UserId);
+                return View(orders);
+            }
+            return RedirectToAction("Index");
         }
     }
 } 

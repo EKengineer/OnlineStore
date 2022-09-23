@@ -10,19 +10,33 @@ namespace OlineStore.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult SignIn(SignIn signIn)
-        {
-            return RedirectToAction("Index", "Home");
-        }
-        public IActionResult SignUp()
+        public IActionResult Registr()
         {
             return View();
         }
 
         [HttpPost]
+        public IActionResult SignIn(SignIn signIn)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+
+        [HttpPost]
         public IActionResult SignUp(SignUp signUp)
         {
+            if (signUp.UserName == signUp.Password)
+            {
+                ModelState.AddModelError("","Логин и пароль не должны совпадать!");
+            }
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return RedirectToAction("Index", "Home");
         }
     }

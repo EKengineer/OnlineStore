@@ -6697,9 +6697,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj",
-      "projectName": "OlineStore",
-      "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OlineStore.csproj",
+      "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
+      "projectName": "OnlineStore",
+      "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
       "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\obj\\",
       "projectStyle": "PackageReference",
