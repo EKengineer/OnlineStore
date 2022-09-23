@@ -24,6 +24,20 @@ namespace Store_Memory
 
             products.Add(product);
 
+
+        }
+        public void EditProduct(int id ,string name, decimal cost, string description)
+        {
+            Product product = new Product(id,name, cost, description);
+
+            products.Add(product);
+
+
+        }
+        public void RemuveProductById(int productId)
+        {
+            var product = products.Single(product => product.Id == productId);
+            products.Remove(product);
         }
 
         public List<Product> GetAllByProductName(string name)
@@ -35,7 +49,7 @@ namespace Store_Memory
         {
             return products;
         }
-        public Product ReturnIdNameCostDescriptionProduct(int id)
+        public Product GetProductById(int id)
         {
             return products.Single(product => product.Id == id);
         }

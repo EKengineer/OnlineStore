@@ -5,7 +5,7 @@ namespace OlineStore.Controllers
 {
     public class AccauntController : Controller
     {
-        public IActionResult Index()
+        public IActionResult SignIn()
         {
             return View();
         }
@@ -15,6 +15,11 @@ namespace OlineStore.Controllers
         {
             return RedirectToAction("Index", "Home");
         }
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult SignUp(SignUp signUp)
         {

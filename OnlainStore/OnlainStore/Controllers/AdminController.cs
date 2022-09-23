@@ -40,5 +40,20 @@ namespace OlineStore.Controllers
 
              return RedirectToAction("Products", "Admin");
         }
+        [HttpPost]
+        public IActionResult EditProduct(int id, EditProduct editProduct)
+        {
+            productRepository.RemuveProductById(id);
+
+            productRepository.EditProduct(id, editProduct.ProductName, editProduct.Cost, editProduct.Description);
+
+            return RedirectToAction("Products", "Admin");
+        }
+        public IActionResult RemoveProduct(int id)
+        {
+            productRepository.RemuveProductById(id);
+
+            return RedirectToAction("Products", "Admin");
+        }
     }
 }

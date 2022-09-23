@@ -41,7 +41,7 @@ namespace OlineStore.Controllers
             var cart = cartRepository.GetByUserId(Constants.UserId);
             if (cart != null)
             {
-                var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+                var produc = productRepository.GetProductById(id);
 
                 cart.AddItem(produc, 1);
             }
@@ -49,7 +49,7 @@ namespace OlineStore.Controllers
             {
                 cart = cartRepository.Create(Constants.UserId);
 
-                var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+                var produc = productRepository.GetProductById(id);
 
                 cart.AddItem(produc, 1);
             }
@@ -63,7 +63,7 @@ namespace OlineStore.Controllers
             var cart = cartRepository.GetByUserId(Constants.UserId);
             if (cart != null)
             {
-                var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+                var produc = productRepository.GetProductById(id);
 
                 cart.ReduceItem(produc, 1);
             }
@@ -77,7 +77,7 @@ namespace OlineStore.Controllers
             var cart = cartRepository.GetByUserId(Constants.UserId);
             if (cart != null)
             {
-                var produc = productRepository.ReturnIdNameCostDescriptionProduct(id);
+                var produc = productRepository.GetProductById(id);
 
                 cart.RemoveItem(produc);
             }

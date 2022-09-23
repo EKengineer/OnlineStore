@@ -23,6 +23,15 @@ namespace Store
             instCounter += 1;
 
         }
+        public Product(int id, string name, decimal cost, string description)
+        {
+            Id = id;
+            Name = name;
+            Cost = cost;
+            Description = description;
+            Link = $"/images/image{Id}.jpg";
+
+        }
 
         public string ToString2()
         {

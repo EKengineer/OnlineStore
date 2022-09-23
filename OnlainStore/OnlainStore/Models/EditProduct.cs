@@ -1,8 +1,8 @@
 ﻿namespace OlineStore.Models
 {
-    public class AddNewProduct
+    public class EditProduct
     {
-        public string Name { get; set; }
+        public string ProductName { get; set; }
         public decimal Cost { get; set; }
         public string Description { get; set; }
     }

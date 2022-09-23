@@ -5,6 +5,7 @@
 
 
     <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span>Администратор</span>
             </button>
@@ -31,11 +32,15 @@
                     </ul>
                 </div>
             </div>
-        
+            <a class="navbar-brand ml-auto" href="/Home/index" >Online Store</a>
+            <form class="form-inline " action="/search/index">
+                <input class="form-control mr-sm-2" type="text" name="query" placeholder="Искать в OnlineStore" />
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Искать</button>
+            </form>
         <ul class="nav">
             <li class="nav-item dropdown">
                 <div class="btn-group dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <button type="button" class="btn btn-primary dropdown-toggle ml-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                         Вход
                     </button>
                     <form method="post" class="dropdown-menu dropdown-menu-dark px-4 py-3">
@@ -55,60 +60,44 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" asp-controller="Accaunt" asp-action="SignIn">Sign in</button>
+                        <button type="submit" class="btn btn-primary"  asp-controller="Accaunt" asp-action="SignIn">Sign in</button>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up</a>
                         <a class="dropdown-item" href="#">Forgot password?</a>
                     </form>
 
                 </div>
             </li>
-        </ul>
-        <ul class="nav">
-            <a class="navbar-brand" href="/Home/index">Online Store</a>
+       
+            <li class="nav-item dropdown ml-2">
+                <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Регистрация
+                    </button>
+                    <form method="post" class="dropdown-menu dropdown-menu-dark px-4 py-3">
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                            <input type="text" name="UserName" class="form-control" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                            <input type="password" name="Password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                            <input type="password" name="ConfirmPassword" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary"  asp-controller="Accaunt" asp-action="SignUp">Зарегистрироваться</button>
+                        <div class="dropdown-divider"></div>
+                    </form>
 
-            <form class="form-inline my-2 my-lg-0" action="/search/index">
-                <input class="form-control mr-sm-2" type="text" name="query" placeholder="Искать в OnlineStore" />
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">Искать</button>
-            </form>
-        </ul>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" name="UserName" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Пароль</label>
-                                <input type="password" class="form-control" name="Password" id="exampleInputPassword1" placeholder="Пароль">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword2">Подтверждение пароля</label>
-                                <input type="password" class="form-control" name="ConfirmPassword" id="exampleInputPassword1" placeholder="Подтверждение пароля">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" asp-controller="Accaunt" asp-action="SignUp">Зарегистрироваться</button>
-                    </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        
 
-        <ul class="nav">
-
-            <li class="nav-item">
+            <li class="nav-item ml-2">
                 @await Component.InvokeAsync("Order")
             </li>
         </ul>
+      </div>
     </nav>
 </header>

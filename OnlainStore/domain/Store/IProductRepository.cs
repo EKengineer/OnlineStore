@@ -8,12 +8,16 @@ namespace Store
     {
         void AddNewProduct(string name, decimal cost, string description);
 
+        void EditProduct(int id, string name, decimal cost, string description);
+
+        void RemuveProductById(int productId);
+
         List<Product> GetAllByProductName(string name);
 
         List<Product> GetAllProduct();
 
 
-        Product ReturnIdNameCostDescriptionProduct(int id);
+        Product GetProductById(int id);
 
 
     }
