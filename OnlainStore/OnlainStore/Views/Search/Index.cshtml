@@ -7,7 +7,12 @@
 </div>
 
 <div class="row">
-
+    @if (Model == null)
+    {
+        <h1 class="text-center">Товар не найден</h1>
+    }
+    else
+    {
     @foreach (var product in Model)
     {
 
@@ -21,6 +26,7 @@
                 <a class="btn btn-primary" href="/Cart/AddItem/@product.Id" role="button">В корзину</a>
             </div>
         </div>
+    }
     }
 
 </div>

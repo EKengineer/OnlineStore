@@ -1,47 +1,60 @@
 ﻿
 
-    <nav class="navbar navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span>Администратор</span>
-            </button>
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Меню</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/Admin/Orders">Заказы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Admin/Users">Пользователи</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Admin/Roles">Роли</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Admin/Products">Продукты</a>
-                        </li>
-
-                    </ul>
-                </div>
+<nav class="navbar navbar-dark bg-dark ">
+    <div class="container-fluid">
+        <button class="btn btn-dark " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                    <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+                </svg>
+            </span>
+        </button>
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Меню</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <a class="navbar-brand ml-auto" href="/Home/index">Online Store</a>
-            <form class="form-inline " action="/search/index">
-                <input class="form-control mr-sm-2" type="text" name="query" placeholder="Искать в OnlineStore" />
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">Искать</button>
-            </form>
-            <ul class="nav">
-               
-               @await Html.PartialAsync("Input")
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Admin/Orders">Заказы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Users">Пользователи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Roles">Роли</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Products">Продукты</a>
+                    </li>
 
-               @await Html.PartialAsync("Registration")
-
-                <li class="nav-item ml-2">
-                    @await Component.InvokeAsync("Orders")
-                </li>
-            </ul>
+                </ul>
+            </div>
         </div>
-    </nav>
+        <a class="navbar-brand  ml-auto" href="/Home/index">Online Store</a>
+        <form class="form-inline " action="/search/index">
+            <input class="form-control mr-sm-2" type="text" name="query" placeholder="Искать в OnlineStore" />
+            <button class="btn btn-dark my-2 my-sm-0" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </button>
+        </form>
+        <ul class="nav">
+            @{
+                var signIn = new SignIn();
+                var signUp = new SignUp();
+            }
+            @await Html.PartialAsync("Input", signIn)
+
+            @await Html.PartialAsync("Registration", signUp)
+
+            <li class="nav-item ml-2">
+                @await Component.InvokeAsync("Orders")
+            </li>
+            <li class="nav-item ml-4">
+            </li>
+        </ul>
+    </div>
+</nav>

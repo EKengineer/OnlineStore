@@ -47,8 +47,13 @@
 </table>
 <div class="text-center">
     <a class="btn btn-primary" href="/Home/index" role="button">Продолжить покупки</a>
-    <a class="btn btn-success" href="/Order/index" role="button">Оформить заказ</a>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#MakingOrder">
+        Оформить заказ
+    </button>
     <a class="btn btn-danger" href="/Cart/clear" role="button">Удалить</a>
 </div>
-
+@{
+    var orders = new Orders();
+}
+@await Html.PartialAsync("MakingOrder", orders)
 

@@ -12,8 +12,16 @@ namespace OlineStore.Models
         [Required(ErrorMessage = "Не указан телефон")]
         public string Phone { get; set; }
 
+        [Required(ErrorMessage = "Не указан Email")]
+        [EmailAddress(ErrorMessage = "Укажите валидный Email")]
+        public string Email { get; set; }
+
 
         [Required(ErrorMessage = "Не указан адрес")]
         public string Address { get; set; }
+
+        public string Comment { get; set; }
+
+
     }
 }

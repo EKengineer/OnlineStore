@@ -6,36 +6,10 @@
     Добавить новый продукт
 </button>
 
-
-<form method="post" class="modal fade" id="AddNewProduct" tabindex="-1" aria-labelledby="AddNewProduct" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="AddNewProduct">Добавить новый продукт</h5>
-            </div>
-            <div class="modal-body">
-                <form >
-                    <div class="form-group">
-                        <label>Название товара</label>
-                        <input type="text" class="form-control" name="Name" placeholder="Название">
-
-                    </div>
-                    <div class="form-group">
-                        <label>Стоимость</label>
-                        <input type="text" class="form-control" name="Cost" placeholder="Стоимость">
-                    </div>
-                    <div class="form-group">
-                        <label>Описание товара</label>
-                        <input type="text" class="form-control" name="Description" placeholder="Описание">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" asp-controller="Admin" asp-action="AddProduct">Добавить</button>
-            </div>
-        </div>
-    </div>
-</form>
+@{
+    var addProduct = new AddNewProduct();
+}
+@await Html.PartialAsync("AddProduct", addProduct)
 
 
 <table class="table table-sm table-striped">
@@ -68,21 +42,12 @@
                                     <h5 class="modal-title" id="EditProduct">Редактировать</h5>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label>Название товара</label>
-                                            <input type="text" class="form-control" name="ProductName" placeholder="Название">
+                                    @{
+                                        var editProduct = new EditProduct();
+                                    }
+                                    @await Html.PartialAsync("EditProduct", editProduct)
 
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Стоимость</label>
-                                            <input type="text" class="form-control" name="Cost" placeholder="Стоимость">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Описание товара</label>
-                                            <input type="text" class="form-control" name="Description" placeholder="Описание">
-                                        </div>
-                                    </form>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary" asp-controller="Admin" asp-action="EditProduct" asp-route-id="@product.Id">Внести изменения</button>

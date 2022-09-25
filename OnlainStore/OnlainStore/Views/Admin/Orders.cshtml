@@ -1,1 +1,68 @@
-﻿<h1 class="text-center">Список заказов</h1>
+﻿@model List<Order>
+
+
+<h1 class="text-center">Список заказов</h1>
+
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Сумма</th>
+            <th scope="col">Статус</th>
+            <th scope="col">Пользователь(логин)</th>
+            <th scope="col">ФИО</th>
+            <th scope="col">Адрес</th>
+            <th scope="col">Телефон</th>
+            <th scope="col">Коментарий</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Время</th>
+            <th scope="col">Статус заказа</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td class="text-left"><a style="color: black">@item.Id</a></td>
+                <td class="text-left">@item.Cart.TotalPrice</td>
+                <td class="text-left">@item.Status</td>
+                <td class="text-left">@item.Email</td>
+                <td class="text-left">@item.Name</td>
+                <td class="text-left">@item.Address</td>
+                <td class="text-left">@item.Phone</td>
+                <td class="text-left">@item.Comment</td>
+                <td class="text-left">@item.DateTime.ToString("D")</td>
+                <td class="text-left">@item.DateTime.ToString("T")</td>
+                <td class="text-left">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                @item.Status
+                            </button>
+                        <form method="post" class="dropdown-menu dropdown-menu-dark px-4 py-3">
+                                <div class="mb-3">
+                                <a class="dropdown-item" href="/Admin/EditOrder/?id=@item.Id&status=Создан">Создан</a>
+                                </div>
+                                <div class="mb-3">
+                                <a class="dropdown-item" href="/Admin/EditOrder/?id=@item.Id&status=Обработан">Обработан</a>
+                                </div>
+                                <div class="mb-3">
+                                <a class="dropdown-item" href="/Admin/EditOrder/?id=@item.Id&status=В пути">В пути</a>
+                                </div>
+                                <div class="mb-3">
+                                <a class="dropdown-item" href="/Admin/EditOrder/?id=@item.Id&status=Отменен">Отменен</a>
+                                </div>
+                                <div class="mb-3">
+                                <a class="dropdown-item" href="/Admin/EditOrder/?id=@item.Id&status=Доставлен">Доставлен</a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                            </form>
+
+                        </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

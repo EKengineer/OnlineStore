@@ -37,6 +37,7 @@ namespace OnlainStore
             services.AddSingleton<IOrderRepositoty, OrderRepository>();
             services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddSingleton<ICartRepositoty, CartRepository>();
+            services.AddSingleton<IRoleRepositoty, RoleRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,45 @@
+﻿@model Orders
+
+
+<form method="post" class="modal fade" id="MakingOrder" tabindex="-1" aria-labelledby="MakingOrder" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="MakingOrder">Добавить новый продукт</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label asp-for="Name">ФИО</label>
+                        <input asp-for="Name" class="form-control" placeholder="Введите ФИО">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address">Адрес</label>
+                        <input  class="form-control" asp-for="Address" placeholder="Введите адрес доставки">
+                        <span asp-validation-for="Address"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone">Телефон</label>
+                        <input  class="form-control" asp-for="Phone" placeholder= "Введите телефон">
+                        <span asp-validation-for="Phone"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email">Email</label>
+                        <input class="form-control" asp-for="Email" placeholder="Введите Email">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Comment">Коментарий</label>
+                        <input  class="form-control" asp-for="Comment" placeholder="Введите Коментарий">
+                        <span asp-validation-for="Comment"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="text-danger font-weight-bold" asp-validation-summary="All"></div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" asp-controller="Order" asp-action="Buy">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</form>

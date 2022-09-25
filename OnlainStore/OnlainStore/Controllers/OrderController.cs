@@ -17,27 +17,21 @@ namespace OlineStore.Controllers
             this.orderRepositoty = orderRepositoty;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         [HttpPost]
             public IActionResult Buy(Orders order)
         {
             if (ModelState.IsValid)
             {
-
-
                 var cart = cartRepository.GetByUserId(Constants.UserId);
 
-                orderRepositoty.Add(order.Name, order.Phone, order.Address, cart);
+                 orderRepositoty.Add(order.Name, order.Phone,order.Email, order.Address, order.Comment, cart);
                 cartRepository.Clear(Constants.UserId);
 
                 var orders = orderRepositoty.GetByUseID(Constants.UserId);
                 return View(orders);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Cart");
         }
     }
 } 

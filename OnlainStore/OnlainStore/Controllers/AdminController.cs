@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OlineStore.Models;
 using Store;
+using Store_Memory;
+using System.Xml.Serialization;
 
 namespace OlineStore.Controllers
 {
     public class AdminController : Controller
     {
         private readonly IProductRepository productRepository;
+        private readonly IOrderRepositoty orderRepositoty;
+        private readonly IRoleRepositoty roleRepositoty;
 
-        public AdminController(IProductRepository productRepository)
+        public AdminController(IProductRepository productRepository, IOrderRepositoty orderRepositoty, IRoleRepositoty roleRepositoty)
         {
             this.productRepository = productRepository;
+            this.orderRepositoty = orderRepositoty;
+            this.roleRepositoty = roleRepositoty;
         }
         public IActionResult Orders()
         {
-            return View();
+            var order = orderRepositoty.GetAllOrder();
+
+            return View(order);
         }
 
         public IActionResult Users()
@@ -24,13 +32,47 @@ namespace OlineStore.Controllers
 
         public IActionResult Roles()
         {
-            return View();
+            var roles = roleRepositoty.GetAllRole();
+
+            return View(roles);
+        }
+
+        [HttpPost]
+        public IActionResult AddRoles(string roleName)
+        {
+            if (roleRepositoty.GetByName(roleName) != null)
+            {
+                ModelState.AddModelError("", "Такая роль уже существует");
+            }
+            if(ModelState.IsValid)
+            {
+                var roles = roleRepositoty.Create(roleName);
+                return RedirectToAction("Roles", "Admin");
+            }
+
+            return RedirectToAction("Roles", "Admin");
+        }
+
+        public IActionResult RemuveRoles(string roleName)
+        {
+            roleRepositoty.Remove(roleName);
+
+            return RedirectToAction("Roles", "Admin");
         }
         public IActionResult Products()
         {
             var products = productRepository.GetAllProduct();
 
             return View(products);
+        }
+
+        public IActionResult EditOrder(int id, string status)
+        {
+            var order = orderRepositoty.ReturnOrderById(id);
+            orderRepositoty.RemuveOrderById(id);
+            orderRepositoty.EditOrder(order.Id, order.Name, order.Phone, order.Email, order.Address, order.Comment, status, order.DateTime, order.Cart);
+
+            return RedirectToAction("Orders", "Admin");
         }
 
         [HttpPost]

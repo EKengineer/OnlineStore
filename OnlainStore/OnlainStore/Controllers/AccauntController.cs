@@ -5,10 +5,6 @@ namespace OlineStore.Controllers
 {
     public class AccauntController : Controller
     {
-        public IActionResult SignIn()
-        {
-            return View();
-        }
 
         public IActionResult Registr()
         {
@@ -16,7 +12,7 @@ namespace OlineStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignIn(SignIn signIn)
+        public IActionResult SignIn(OlineStore.Models.SignIn signIn)
         {
             if (ModelState.IsValid)
             {
@@ -31,7 +27,7 @@ namespace OlineStore.Controllers
         {
             if (signUp.UserName == signUp.Password)
             {
-                ModelState.AddModelError("","Логин и пароль не должны совпадать!");
+                ModelState.AddModelError("", "Логин и пароль не должны совпадать!");
             }
             if (ModelState.IsValid)
             {
