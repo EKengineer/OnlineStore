@@ -5,7 +5,7 @@ namespace OlineStore.Models
     public class SignIn
     {
         [Required(ErrorMessage = "Не указан email")]
-        [EmailAddress(ErrorMessage = "Введите валидныц email")]
+        [EmailAddress(ErrorMessage = "Введите валидный email")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Не указан пароль")]

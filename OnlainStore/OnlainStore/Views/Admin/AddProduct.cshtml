@@ -1,0 +1,33 @@
+﻿@model AddNewProduct
+<form method="post" class="modal fade" id="AddNewProduct" tabindex="-1" aria-labelledby="AddNewProduct" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AddNewProduct">Добавить новый продукт</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label asp-for="Name">Название товара</label>
+                        <input type="text" class="form-control" asp-for="Name" placeholder="Название">
+                        <span asp-validation-for="Name"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cost">Стоимость</label>
+                        <input type="text" class="form-control" asp-for="Cost" placeholder="Стоимость">
+                        <span asp-validation-for="Cost"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description">Описание товара</label>
+                        <input type="text" class="form-control" asp-for="Description" placeholder="Описание">
+                        <span asp-validation-for="Description"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" asp-controller="Admin" asp-action="AddProduct">Добавить</button>
+            </div>
+        </div>
+    </div>
+</form>

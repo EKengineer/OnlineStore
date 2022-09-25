@@ -12,7 +12,9 @@ namespace OlineStore.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Не указан повторный пароль")]
-        [Compare("Pssword", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
+
+
+
     }
 }

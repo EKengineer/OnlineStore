@@ -14,7 +14,12 @@ namespace OlineStore.Controllers
         }
         public IActionResult Index(string query)
         {
+            if (query == null)
+            {
+                return View();
+            }   
             var product = productRepository.GetAllByProductName(query);
+
             return View(product);
         }
     }

@@ -19,7 +19,6 @@ C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreap
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Order\Buy.cshtml.g.cs
-C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Orders\Orders.cshtml.g.cs
@@ -128,3 +127,6 @@ C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\bin\Debug\netcoreap
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\OnlineStore.Views.pdb
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\OnlineStore.csproj.CopyComplete
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\OnlineStore.genruntimeconfig.cache
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AddProduct.cshtml.g.cs
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Cart\MakingOrder.cshtml.g.cs
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditProduct.cshtml.g.cs
