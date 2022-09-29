@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleDropdownFormPassword1" class="form-label" asp-for="Password">Password</label>
-                <input  asp-for="Password" class=" form-control" placeholder="Password">
+                <input asp-for="Password" class="form-control" type="password" placeholder="Password">
                 <span asp-validation-for="Password"></span>
             </div>
             <div class="mb-3">
@@ -28,7 +28,7 @@
                             </label>
                         </div>
             </div>
-                <button type="submit" class="btn btn-primary" asp-controller="Accaunt" asp-action="SignIn">Sign in</button>
+                <button type="submit" class="btn btn-primary" asp-area="" asp-controller="Accaunt" asp-action="SignIn">Sign in</button>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Forgot password?</a>
         </form>

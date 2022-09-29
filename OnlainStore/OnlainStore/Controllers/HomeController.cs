@@ -27,17 +27,6 @@ namespace OnlainStore.Controllers
 
             return View(result);
         }
-        //public IActionResult Index(SignIn signIn) 
-        //{
-        //    var result = productRepository.GetAllProduct();
-
-        //    return View(signIn);
-        //}
-        //public IActionResult Index(SignIn signIn)
-        //{
-
-        //    return View(signIn);
-        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

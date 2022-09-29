@@ -10,11 +10,20 @@
         <div class="col-4 card shadow">
             <img class="card-img-top" src="@product.Link" />
             <div class="card-body">
-                <a style="color: black" href="/product/index/@product.Id">
+                <a style="color: black"
+                   asp-area=""
+                   asp-controller="Product"
+                   asp-action="Indrx"
+                   asp-route-id="@product.Id">
                     <h5>@product.Name</h5>
                 </a>
                 <h5>@product.Cost руб </h5>
-                <a class="btn btn-primary" href="/Cart/AddItem/@product.Id" role="button">В корзину</a>
+                <a class="btn btn-primary"
+               asp-area=""
+               asp-controller="Cart"
+               asp-action="AddItem"
+               asp-route-id="@product.Id" 
+               role="button">В корзину</a>
             </div>
         </div>
     }

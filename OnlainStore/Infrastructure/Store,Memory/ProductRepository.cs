@@ -37,6 +37,7 @@ namespace Store_Memory
         public void RemuveProductById(int productId)
         {
             var product = products.Single(product => product.Id == productId);
+            product.MinusId();
             products.Remove(product);
         }
 

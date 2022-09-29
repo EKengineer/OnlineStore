@@ -1,23 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OlineStore.Models;
+using Store;
+using System;
 
 namespace OlineStore.Controllers
 {
     public class AccauntController : Controller
     {
+        private readonly IUsersRepository usersRepository;
 
-        public IActionResult Registr()
+        public AccauntController(IUsersRepository usersRepository)
         {
-            return View();
+            this.usersRepository = usersRepository;
         }
 
         [HttpPost]
         public IActionResult SignIn(OlineStore.Models.SignIn signIn)
         {
-            if (ModelState.IsValid)
+            var user = usersRepository.GetByEmail(signIn.UserName);
+            if (user != null)
             {
-                return RedirectToAction("Index", "Home");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -25,14 +33,30 @@ namespace OlineStore.Controllers
         [HttpPost]
         public IActionResult SignUp(SignUp signUp)
         {
-            if (signUp.UserName == signUp.Password)
+
+            var user = usersRepository.GetByEmail(signUp.UserName);
+
+            if (user == null)
             {
-                ModelState.AddModelError("", "Логин и пароль не должны совпадать!");
+                if (signUp.UserName == signUp.Password)
+                {
+                    ModelState.AddModelError("", "Логин и пароль не должны совпадать!");
+                }
+                if (ModelState.IsValid)
+                {
+                    if (signUp.Password == signUp.ConfirmPassword)
+                    {
+                        usersRepository.Create(signUp.UserName, signUp.Password);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Пароли не совпадают!");
+                    }
+                }
             }
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Index", "Home");
-            }
+
+           
             return RedirectToAction("Index", "Home");
         }
     }

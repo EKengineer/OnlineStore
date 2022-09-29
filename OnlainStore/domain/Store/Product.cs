@@ -13,13 +13,13 @@ namespace Store
 
 
 
-        public Product (string name, decimal cost, string description)
+        public Product(string name, decimal cost, string description)
         {
             Id = instCounter;
             Name = name;
             Cost = cost;
             Description = description;
-            Link =  $"/images/image{Id}.jpg";
+            Link = $"/images/image{Id}.jpg";
             instCounter += 1;
 
         }
@@ -33,6 +33,10 @@ namespace Store
 
         }
 
+        public void MinusId()
+        {
+            instCounter = instCounter - 1;
+        }
         public string ToString2()
         {
             return $"{Id}\n{Name}\n{Cost}\n{Description}";
