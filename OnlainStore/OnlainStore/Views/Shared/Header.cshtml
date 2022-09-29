@@ -17,22 +17,38 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/Admin/Orders">Заказы</a>
+                        <a class="nav-link active" aria-current="page"
+                           asp-area="Admin"
+                           asp-controller="Order"
+                           asp-action="Orders">Заказы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Admin/Users">Пользователи</a>
+                        <a class="nav-link"
+                           asp-area="Admin"
+                           asp-controller="User"
+                           asp-action="Users">Пользователи</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Admin/Roles">Роли</a>
+                        <a class="nav-link"
+                           asp-area="Admin"
+                           asp-controller="Role"
+                           asp-action="Roles">Роли</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Admin/Products">Продукты</a>
+                        <a class="nav-link"
+                           asp-area="Admin"
+                           asp-controller="Product"
+                           asp-action="Products">Продукты</a>
                     </li>
 
                 </ul>
             </div>
         </div>
-        <a class="navbar-brand  ml-auto" href="/Home/index">Online Store</a>
+        <a class="navbar-brand  ml-auto"
+           asp-area=""
+           asp-controller="Home"
+           asp-action="index"
+           asp-route-id="">Online Store</a>
         <form class="form-inline " action="/search/index">
             <input class="form-control mr-sm-2" type="text" name="query" placeholder="Искать в OnlineStore" />
             <button class="btn btn-dark my-2 my-sm-0" type="submit">

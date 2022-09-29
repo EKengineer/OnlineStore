@@ -1,0 +1,41 @@
+﻿@model List<User>
+
+<div class="col-10 card shadow">
+    <table class="table table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col-4" scope="col"><h3>Список пользователей</h3></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="col-2" scope="col">Email (логин)</td>
+                    <th class="col-2" scope="col">ФИО</th>
+                    <th class="col-2" scope="col">Телефон</th>
+                    <td class="col-2" scope="col">Адрес</td>
+                    <td class="col-2" scope="col"></td>
+                </tr>
+            
+            @foreach (var user in Model)
+            {
+            <tr>
+                    <td class="col-2" scope="col">@user.Email</td>
+                    <th class="col-2" scope="col">@user.Name</th>
+                    <th class="col-2" scope="col">@user.Phone</th>
+                    <td class="col-2" scope="col">@user.Address</td>
+                    <td class="col-2" scope="col">
+                        <a class="btn btn-primary"
+                       asp-area="Admin"
+                       asp-controller="User"
+                       asp-action="MoreUser"
+                       asp-route-name="@user.Email">Подробнее</a>
+                    </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

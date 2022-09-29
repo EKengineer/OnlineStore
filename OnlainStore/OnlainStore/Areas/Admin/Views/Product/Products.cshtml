@@ -1,0 +1,67 @@
+﻿@model List<Product>
+
+<h1 class="text-center">Список продуктов</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddNewProduct">
+    Добавить новый продукт
+</button>
+
+@{
+    var addProduct = new OnlineStore.Areas.Admin.Modals.AddNewProduct();
+}
+@await Html.PartialAsync("AddProduct", addProduct)
+
+
+<table class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Название</th>
+            <th scope="col">Цена</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for(int i = 0; i<Model.Count; i++)
+        {
+            
+            string nameModal = "EditProduct" + i;
+            <tr>
+
+                <td>@Model[i].Id</td>
+                <td class="text-left">@Model[i].Name</td>
+                <td class="text-left">@Model[i].Cost</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@nameModal">
+                        Редактировать
+                    </button>
+                    <form method="post" class="modal fade" id="@nameModal" tabindex="-1" aria-labelledby="asd" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="@nameModal">Редактировать</h5>
+                                </div>
+                                <div class="modal-body">
+                                    @{
+                                        var editProduct = new OnlineStore.Areas.Admin.Modals.EditProduct();
+                                    }
+                                    @await Html.PartialAsync("EditProduct", editProduct)
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="Product" asp-action="EditProduct" asp-route-Editid="@Model[i].Id">Внести изменения</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </td>
+                <td class="text-left">
+                    <a class="btn btn-danger" asp-area="Admin" asp-controller="Product" asp-action="RemoveProduct" asp-route-id="@Model[i].Id">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

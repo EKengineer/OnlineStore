@@ -1,0 +1,110 @@
+﻿@model User
+
+
+<div class="col-10 card shadow">
+    <table class="table table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col-6" scope="col"><h4>Пользователь @Model.Email</h4></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
+                <th class="col" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-2" scope="col">ФИО</td>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col">@Model.Name</th>
+                <td class="col-2" scope="col"></td>
+                <td class="col-2" scope="col"></td>
+            </tr>
+            <tr>
+                <td class="col-2" scope="col">Email (логин)</td>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col">@Model.Email</th>
+                <td class="col-2" scope="col"></td>
+                <td class="col-2" scope="col"></td>
+            </tr>
+            <tr>
+                <td class="col-2" scope="col">Телефон</td>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col">@Model.Phone</th>
+                <td class="col-2" scope="col"></td>
+                <td class="col-2" scope="col"></td>
+            </tr>
+            <tr>
+                <td class="col-2" scope="col">Адрес</td>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col">@Model.Address</th>
+                <td class="col-2" scope="col"></td>
+                <td class="col-2" scope="col"></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="col-2" scope="col"></td>
+                <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
+                <td class="col-2" scope="col"></td>
+                <td class="col-2" scope="col">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                            Действия
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark px-4 py-3">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changePassword">Сменить пароль</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editUser">Редактирование</a></li>
+                            <li><a class="dropdown-item" href="#">Права доступа</a></li>
+                            <li><a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="RemoveUser" asp-route-Email="@Model.Name">Удалить</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<form method="post" class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="changePassword" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changePassword">Сменить пароль</h5>
+            </div>
+            <div class="modal-body">
+                @{
+                    var changePassword = new OnlineStore.Areas.Admin.Modals.ChangePassword();
+                }
+                @await Html.PartialAsync("ChangePassword", changePassword)
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="ChangePassword" asp-route-userId="@Model.Id">Сменить пароль</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post" class="modal fade" id="editUser" tabindex="-1" aria-labelledby="editUser" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUser">Редактирование данных</h5>
+            </div>
+            <div class="modal-body">
+                @{
+                    var editUser = new OnlineStore.Areas.Admin.Modals.EditUser();
+                }
+                @await Html.PartialAsync("EditUser", editUser)
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="EditUser" asp-route-userId="@Model.Id">Внести изменения</button>
+            </div>
+        </div>
+    </div>
+</form>
