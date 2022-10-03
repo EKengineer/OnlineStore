@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.CodeAnalysis.Options;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,6 +30,10 @@ namespace OnlainStore
 
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = Configuration.GetConnectionString("online_shop");
+            services.AddDbContext<DatabaseContext>(options =>
+                options.UseSqlServer(connection));
+
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
             //services.AddSession(options => 
@@ -40,8 +45,8 @@ namespace OnlainStore
             //    options.Cookie.IsEssential = true;
             //});
             services.AddSingleton<IOrderRepositoty, OrderRepository>();
-            services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<ICartRepositoty, CartRepository>();
+            services.AddTransient<IProductRepository, ProductDbRepository>();
+            services.AddTransient<ICartRepositoty, CartDbRepository>();
             services.AddSingleton<IRoleRepositoty, RoleRepository>();
             services.AddSingleton<IUsersRepository, UsersRepository>();
 

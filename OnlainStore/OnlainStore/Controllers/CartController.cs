@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Helpers;
 using Store;
 using Store_Memory;
 using System;
@@ -27,7 +28,7 @@ namespace OlineStore.Controllers
             {
                 var cart = cartRepository.GetByUserId(Constants.UserId);
 
-                return View(cart);
+                return View(Mapping.ToCatViewModel(cart));
 
             }
 
@@ -43,15 +44,15 @@ namespace OlineStore.Controllers
             {
                 var produc = productRepository.GetProductById(id);
 
-                cart.AddItem(produc, 1);
+                cartRepository.AddItem(produc, Constants.UserId);
             }
             else
             {
-                cart = cartRepository.Create(Constants.UserId);
+                cartRepository.Create(Constants.UserId);
 
                 var produc = productRepository.GetProductById(id);
 
-                cart.AddItem(produc, 1);
+                cartRepository.AddItem(produc, Constants.UserId);
             }
             return RedirectToAction("Index", "Cart");
 
@@ -65,7 +66,7 @@ namespace OlineStore.Controllers
             {
                 var produc = productRepository.GetProductById(id);
 
-                cart.ReduceItem(produc, 1);
+                cartRepository.ReduceItem(produc, Constants.UserId);
             }
 
 
@@ -79,7 +80,7 @@ namespace OlineStore.Controllers
             {
                 var produc = productRepository.GetProductById(id);
 
-                cart.RemoveItem(produc);
+                cartRepository.RemoveItem(produc, Constants.UserId);
             }
 
             return RedirectToAction("Index", "Cart");
