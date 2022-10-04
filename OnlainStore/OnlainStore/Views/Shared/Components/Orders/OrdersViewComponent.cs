@@ -20,7 +20,7 @@ namespace OlineStore.Views.Shared.ViewComponents.CartViewComponents
             var productCounts = Mapping.ToCatViewModel(cart).TotalCount;
 
 
-            return View("Orders", productCounts);
+            return View("OrderViewModel", productCounts);
         }
     }   
 }

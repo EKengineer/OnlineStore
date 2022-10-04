@@ -44,7 +44,7 @@ namespace OnlainStore
             //    options.Cookie.HttpOnly = true;
             //    options.Cookie.IsEssential = true;
             //});
-            services.AddSingleton<IOrderRepositoty, OrderRepository>();
+            services.AddTransient<IOrderRepositoty, OrderDbRepository>();
             services.AddTransient<IProductRepository, ProductDbRepository>();
             services.AddTransient<ICartRepositoty, CartDbRepository>();
             services.AddSingleton<IRoleRepositoty, RoleRepository>();

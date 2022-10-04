@@ -1,9 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using OnlineStore.Models;
+using Store;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace OlineStore.Models
 {
-    public class Orders
+    public class OrderViewModel
     {
+        public int Id { get; }
         [Required(ErrorMessage = "Не указан имя")]
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Имя должно содержать от 2 до 25 символов")]
         public string Name { get; set; }
@@ -22,6 +26,23 @@ namespace OlineStore.Models
 
         public string Comment { get; set; }
 
+        public DateTime DateTime { get; }
 
+        public string Status { get; }
+
+        public CartViewModel Cart { get; }
+
+        public OrderViewModel(int id, string name, string phone, string email, string address, string comment, CartViewModel cart)
+        {
+            Id = id;
+            Name = name;
+            Phone = phone;
+            Email = email;
+            Address = address;
+            Comment = comment;
+            Cart = cart;
+            DateTime = DateTime.Now;
+            Status = "Создан";
+        }
     }
 }

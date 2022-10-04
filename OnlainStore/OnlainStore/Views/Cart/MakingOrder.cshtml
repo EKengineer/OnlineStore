@@ -1,4 +1,4 @@
-﻿@model Orders
+﻿@model OrderViewModel
 
 
 <form method="post" class="modal fade" id="MakingOrder" tabindex="-1" aria-labelledby="MakingOrder" aria-hidden="true">
@@ -38,7 +38,7 @@
             </div>
             <div class="text-danger font-weight-bold" asp-validation-summary="All"></div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" asp-controller="Order" asp-action="Buy">Оформить заказ</button>
+                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="Order" asp-action="Buy">Оформить заказ</button>
             </div>
         </div>
     </div>

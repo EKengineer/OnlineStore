@@ -1,4 +1,4 @@
-﻿using Store;
+﻿using Store.Model;
 using System;
 using System.Collections.Generic;
 
@@ -6,11 +6,11 @@ namespace Store_Memory
 {
     public interface IOrderRepositoty
     {
-        Order Add(string name, string phone, string email, string address, string comment, Cart cart);
+        Order Add(Order order);
 
         void RemuveOrderById(int orderId);
 
-        void EditOrder(int id, string name, string phone, string email, string address, string comment, string status, DateTime dateTime, Cart cart);
+        void EditOrder(int id, string status);
 
         Order ReturnOrderById(int orderId);
 

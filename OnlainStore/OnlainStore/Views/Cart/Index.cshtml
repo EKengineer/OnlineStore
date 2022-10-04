@@ -53,7 +53,7 @@
     <a class="btn btn-danger" href="/Cart/clear" role="button">Удалить</a>
 </div>
 @{
-    var orders = new Orders();
+    OrderViewModel orders = null;
 }
 @await Html.PartialAsync("MakingOrder", orders)
 
