@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Helpers;
 using Store;
 
 namespace OlineStore.Views.Shared.ViewComponents.CartViewComponents
@@ -15,10 +16,11 @@ namespace OlineStore.Views.Shared.ViewComponents.CartViewComponents
         public IViewComponentResult Invoke()
         {
             var cart = cartRepository.GetByUserId(Constants.UserId);
-            var productCounts = cart?.TotalCount;
+
+            var productCounts = Mapping.ToCatViewModel(cart).TotalCount;
 
 
-            return View("Orders", productCounts);
+            return View("OrderViewModel", productCounts);
         }
     }   
 }

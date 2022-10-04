@@ -6,9 +6,9 @@ namespace Store
 {
     public interface IProductRepository
     {
-        void AddNewProduct(string name, decimal cost, string description);
+        void AddNewProduct(Product product);
 
-        void EditProduct(int id, string name, decimal cost, string description);
+        void EditProduct(int id, Product product);
 
         void RemuveProductById(int productId);
 
@@ -16,8 +16,9 @@ namespace Store
 
         List<Product> GetAllProduct();
 
-
         Product GetProductById(int id);
+
+        Product GetLastProduct();
 
 
 

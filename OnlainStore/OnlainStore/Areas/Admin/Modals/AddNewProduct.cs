@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Store;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineStore.Areas.Admin.Modals
 {
@@ -14,5 +15,8 @@ namespace OnlineStore.Areas.Admin.Modals
         [Required(ErrorMessage = "Не указано описание")]
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Имя должно содержать от 2 до 100 символов")]
         public string Description { get; set; }
+
     }
 }
+
+

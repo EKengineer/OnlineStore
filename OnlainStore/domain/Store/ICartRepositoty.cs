@@ -10,12 +10,16 @@ namespace Store
 
         Cart Create(string userID);
 
+        void AddItem(Product product, string userId);
+
         Cart GetByUserId(string userId);
 
         Cart GetById(int id);
 
-        void Update(Cart order);
-
         bool GetCount();
+
+        void ReduceItem(Product product, string userId);
+
+        void RemoveItem(Product product, string userId);
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Cart
+﻿@model OnlineStore.Models.CartViewModel
 @{
     ViewData["Title"] = "Корзина";
 }
@@ -18,20 +18,20 @@
     </thead>
     <tbody>
 
-        @foreach (var item in Model.Items)
+        @foreach (var item in Model.items)
         {
             <tr>
 
-                <td>@item.ProductName</td>
-                <td class="text-left">@item.Price</td>
+                <td>@item.Product.Name</td>
+                <td class="text-left">@item.Product.Cost</td>
                 <td class="text-left">@item.Count</td>
                 <td class="text-left">@item.TotalPrice</td>
                 <td class="text-center">
-                    <a class="btn btn-success" href="/Cart/AddItem/@item.ProductId" role="button">+</a>
-                    <a class="btn btn-danger" href="/Cart/ReduceItem/@item.ProductId" role="button">-</a>
+                    <a class="btn btn-success" href="/Cart/AddItem/@item.Product.Id" role="button">+</a>
+                    <a class="btn btn-danger" href="/Cart/ReduceItem/@item.Product.Id" role="button">-</a>
                 </td>
                 <td class="text-left">
-                    <a class="btn btn-danger" href="/Cart/RemoveItem/@item.ProductId" role="button">Удалить</a>
+                    <a class="btn btn-danger" href="/Cart/RemoveItem/@item.Product.Id" role="button">Удалить</a>
                 </td>
             </tr>
         }
@@ -53,7 +53,7 @@
     <a class="btn btn-danger" href="/Cart/clear" role="button">Удалить</a>
 </div>
 @{
-    var orders = new Orders();
+    OrderViewModel orders = null;
 }
 @await Html.PartialAsync("MakingOrder", orders)
 
