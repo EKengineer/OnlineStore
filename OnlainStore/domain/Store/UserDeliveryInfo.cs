@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Store.Model
+namespace Store
 {
-    public class Order
+    public class UserDeliveryInfo
     {
         public int Id { get; set; }
 
@@ -15,14 +15,6 @@ namespace Store.Model
         public string Email { get; set; }
 
         public string Address { get; set; }
-
-        public DateTime DateTime { get; set; }
-
-        public string Status { get; set; }
-
-        public string Comment { get; set; }
-
-        public Cart Cart { get; set; }
 
     }
 }

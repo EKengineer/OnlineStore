@@ -28,13 +28,12 @@ namespace OnlineStore.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var cart = cartRepository.GetByUserId(Constants.UserId);
-                var order = Mapping.ToOrder(orderViewModel, cart);
+                var order = Mapping.ToOrder(orderViewModel, cart.items);
 
                 orderRepositoty.Add(order);
                 cartRepository.Clear(Constants.UserId);
 
-                var orders = orderRepositoty.GetByUseID(Constants.UserId);
-                return View(orders);
+                return View(Mapping.ToOrderViewModel(order));
             }
             return RedirectToAction("Index", "Cart");
         }
@@ -42,7 +41,7 @@ namespace OnlineStore.Areas.Admin.Controllers
         {
             var order = orderRepositoty.GetAllOrder();
 
-            return View(order);
+            return View(Mapping.ToListOrderViewModel(order));
         }
 
         
@@ -51,7 +50,7 @@ namespace OnlineStore.Areas.Admin.Controllers
         {;
             orderRepositoty.EditOrder(id, status);
 
-            return RedirectToAction("OrderViewModel", "Order");
+            return RedirectToAction("Orders", "Order");
         }
 
 

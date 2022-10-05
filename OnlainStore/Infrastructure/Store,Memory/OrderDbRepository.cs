@@ -5,7 +5,8 @@ using System.Net;
 using System.Numerics;
 using System.Text;
 using System.Xml.Linq;
-using Store.Model;
+using Microsoft.EntityFrameworkCore;
+using Store;
 
 namespace Store_Memory
 {
@@ -46,27 +47,21 @@ namespace Store_Memory
             return order;
         }
 
-        public Order GetByUseID(string userId)
-        {
-            
-            return databaseContext.Orders.FirstOrDefault(order => order.Cart.UserId == userId);
-        }
-
         public Order GetByName(string name)
         {
 
-            return databaseContext.Orders.FirstOrDefault(order => order.Name == name);
+            return databaseContext.Orders.FirstOrDefault(order => order.User.Name == name);
         }
 
         public Order GetByPhone(string phone)
         {
 
-            return databaseContext.Orders.FirstOrDefault(order => order.Phone == phone);
+            return databaseContext.Orders.FirstOrDefault(order => order.User.Phone == phone);
         }
 
         public List<Order> GetAllOrder()
         {
-            return databaseContext.Orders.ToList();
+            return databaseContext.Orders.Include(x => x.CartItem).ThenInclude(x => x.Product).Include(x => x.User).ToList();
         }
     }
 }

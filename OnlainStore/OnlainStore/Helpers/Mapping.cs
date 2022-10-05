@@ -1,7 +1,6 @@
 ﻿using OlineStore.Models;
 using OnlineStore.Models;
 using Store;
-using Store.Model;
 using Store_Memory;
 using System.Collections.Generic;
 
@@ -12,7 +11,12 @@ namespace OnlineStore.Helpers
 
         public static CartViewModel ToCatViewModel(Cart cart)
         {
-            return new CartViewModel(cart.Id, ToCatItemViewModel(cart.items), cart.UserId);
+            if (cart == null)
+            {
+                return null;
+            }
+                return new CartViewModel(cart.Id, ToCatItemViewModel(cart.items), cart.UserId);
+            
         }
         public static List<CartItemViewModel> ToCatItemViewModel(List<CartItem> cartDbItems)
         {
@@ -26,23 +30,45 @@ namespace OnlineStore.Helpers
             return cartItems;
         }
 
-        public static Order ToOrder(OrderViewModel order, Cart cart)
+        public static Order ToOrder(OrderViewModel order, List<CartItem> cartDbItems)
         {
             var Order = new Order
             {
                 Id = order.Id,
-                Address = order.Address,
                 Status = order.Status,
-                Cart = cart,
                 Comment = order.Comment,
                 DateTime = order.DateTime,
-                Email = order.Email,
-                Name = order.Name,
-                Phone = order.Phone,
+                CartItem = cartDbItems,
+                User = new UserDeliveryInfo
+                {
+                    Email = order.Email,
+                    Name = order.Name,
+                    Phone = order.Phone,
+                    Address = order.Address,
+                }
+                
+                
             };
             return Order;
         }
+        
+        public static OrderViewModel ToOrderViewModel(Order order)
+        {
+            OrderViewModel orderViewModel = new OrderViewModel(order.Id, order.User.Name, order.User.Phone, order.User.Email, order.User.Address, order.Comment, order.DateTime, order.Status, ToCatItemViewModel(order.CartItem));
 
+            return orderViewModel;
+        }
+        public static List<OrderViewModel> ToListOrderViewModel(List<Order> order)
+        {
+            var listOrder = new List<OrderViewModel>();
+            foreach (var orderItem in order)
+            {
+                var orderViewModel = new OrderViewModel(orderItem.Id, orderItem.User.Name, orderItem.User.Phone, orderItem.User.Email, orderItem.User.Address, orderItem.Comment, orderItem.DateTime, orderItem.Status, ToCatItemViewModel(orderItem.CartItem));
 
+                listOrder.Add(orderViewModel);
+            }
+
+            return listOrder;
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Store.Model;
+﻿using Store;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +14,7 @@ namespace Store_Memory
 
         Order ReturnOrderById(int orderId);
 
-        Order GetByUseID(string userId);
+        //Order GetByUseID(string userId);
 
         Order GetByName(string name);
 
