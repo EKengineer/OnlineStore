@@ -50,10 +50,14 @@
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#MakingOrder">
         Оформить заказ
     </button>
-    <a class="btn btn-danger" href="/Cart/clear" role="button">Удалить</a>
+    <a class="btn btn-danger"
+       asp-area=""
+       asp-controller="Cart"
+       asp-action="clear"
+       role="button">Удалить</a>
 </div>
 @{
-    OrderViewModel orders = null;
+    OrderViewModel orders = new OrderViewModel();
 }
 @await Html.PartialAsync("MakingOrder", orders)
 

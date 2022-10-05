@@ -1,7 +1,9 @@
 ﻿using OnlineStore.Models;
 using Store;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace OlineStore.Models
 {
@@ -30,9 +32,20 @@ namespace OlineStore.Models
 
         public string Status { get; }
 
-        public CartViewModel Cart { get; }
+        public List<CartItemViewModel> CartItemViewModel { get; set; }
 
-        public OrderViewModel(int id, string name, string phone, string email, string address, string comment, CartViewModel cart)
+
+        public int TotalCount()
+        {
+             return CartItemViewModel?.Sum(item => item.Count) ?? 0; 
+        }
+
+        public decimal TotalPrice()
+        {
+             return CartItemViewModel.Sum(item => item.Product.Cost * item.Count); 
+        }
+
+        public OrderViewModel(int id, string name, string phone, string email, string address, string comment, List<CartItemViewModel> cartItemViewModel)
         {
             Id = id;
             Name = name;
@@ -40,7 +53,24 @@ namespace OlineStore.Models
             Email = email;
             Address = address;
             Comment = comment;
-            Cart = cart;
+            CartItemViewModel = cartItemViewModel;
+            DateTime = DateTime.Now;
+            Status = "Создан";
+        }
+        public OrderViewModel(int id, string name, string phone, string email, string address, string comment, DateTime dateTime, string status, List<CartItemViewModel> cartItemViewModel)
+        {
+            Id = id;
+            Name = name;
+            Phone = phone;
+            Email = email;
+            Address = address;
+            Comment = comment;
+            CartItemViewModel = cartItemViewModel;
+            DateTime = dateTime;
+            Status = status;
+        }
+        public OrderViewModel()
+        {
             DateTime = DateTime.Now;
             Status = "Создан";
         }

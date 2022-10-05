@@ -8,8 +8,6 @@ namespace Store
     {
         void Clear(string userId);
 
-        Cart Create(string userID);
-
         void AddItem(Product product, string userId);
 
         Cart GetByUserId(string userId);

@@ -16,11 +16,14 @@ namespace OlineStore.Views.Shared.ViewComponents.CartViewComponents
         public IViewComponentResult Invoke()
         {
             var cart = cartRepository.GetByUserId(Constants.UserId);
-
+            if (cart == null)
+            {
+                return View("Orders", 0);
+            }
             var productCounts = Mapping.ToCatViewModel(cart).TotalCount;
 
 
-            return View("OrderViewModel", productCounts);
+            return View("Orders", productCounts);
         }
     }   
 }

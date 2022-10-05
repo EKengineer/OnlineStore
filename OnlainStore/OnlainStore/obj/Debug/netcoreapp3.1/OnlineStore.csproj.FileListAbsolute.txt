@@ -137,7 +137,6 @@ C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreap
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Cart\MakingOrder.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Order\Buy.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Orders\Orders.cshtml.g.cs
@@ -190,3 +189,4 @@ C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\bin\Debug\netcoreap
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Buy.cshtml.g.cs

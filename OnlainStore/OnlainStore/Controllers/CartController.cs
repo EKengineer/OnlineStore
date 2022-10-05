@@ -39,21 +39,10 @@ namespace OlineStore.Controllers
 
         public IActionResult AddItem(int id)
         {
-            var cart = cartRepository.GetByUserId(Constants.UserId);
-            if (cart != null)
-            {
-                var produc = productRepository.GetProductById(id);
+            var produc = productRepository.GetProductById(id);
 
-                cartRepository.AddItem(produc, Constants.UserId);
-            }
-            else
-            {
-                cartRepository.Create(Constants.UserId);
-
-                var produc = productRepository.GetProductById(id);
-
-                cartRepository.AddItem(produc, Constants.UserId);
-            }
+            cartRepository.AddItem(produc, Constants.UserId);
+           
             return RedirectToAction("Index", "Cart");
 
         }
