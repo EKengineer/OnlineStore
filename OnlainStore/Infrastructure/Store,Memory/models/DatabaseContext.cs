@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Store;
+using Store_Memory;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +20,7 @@ namespace Store_Memory
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options) 
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
 
         

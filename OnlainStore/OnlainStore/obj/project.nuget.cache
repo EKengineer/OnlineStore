@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lbrrC+xwSZR7oFmKFLSo1wP6ITp53ZmF2xDPgsiVxkKF+nAGry+c7qlgaeXAGcV1YlEe5eSGApLvjWIa4xXVWQ==",
+  "dgSpecHash": "VRbe7AmQpOOIKSlqnwdphPGWMGfRGefGCYv3Ee+L1NFIugL2akY8Ai15JvG4Rw1T9BPgP/QGORTHI2fuLdh/lg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\languageext.core\\4.2.9\\languageext.core.4.2.9.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\maxmind.db\\4.0.0\\maxmind.db.4.0.0.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
@@ -24,6 +25,7 @@
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.6\\microsoft.entityframeworkcore.5.0.6.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.6\\microsoft.entityframeworkcore.abstractions.5.0.6.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.6\\microsoft.entityframeworkcore.analyzers.5.0.6.nupkg.sha512",
+    "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.6\\microsoft.entityframeworkcore.design.5.0.6.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.6\\microsoft.entityframeworkcore.relational.5.0.6.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.6\\microsoft.entityframeworkcore.sqlserver.5.0.6.nupkg.sha512",
     "C:\\Users\\ek\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",

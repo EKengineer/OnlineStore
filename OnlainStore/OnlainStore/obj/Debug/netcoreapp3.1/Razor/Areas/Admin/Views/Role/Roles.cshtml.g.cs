@@ -40,13 +40,6 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
-using Store;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Store_Memory;
 
@@ -68,7 +61,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7390db5573e15745604a25282f2eb2a34ad904fd", @"/Areas/Admin/Views/Role/Roles.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a11f5182d4a1088deeaa1c6e6a5ab5a9464da4d", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_Role_Roles : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Role>>
     #nullable disable
@@ -147,7 +140,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                    <th class=\"col-2\" scope=\"col\"></th>\r\n                    <th class=\"col-2\" scope=\"col\"></th>\r\n                    <td class=\"col-2\" scope=\"col\"></td>\r\n                    <td class=\"col-2\" scope=\"col\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd11381", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd11188", async() => {
                 WriteLiteral("\r\n                        Удалить роль\r\n                        ");
             }
             );
@@ -207,7 +200,7 @@ using Microsoft.AspNetCore.Http;
 
 
 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15013", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd14820", async() => {
                 WriteLiteral(@"
     <div class=""modal-dialog"">
         <div class=""modal-content"">
@@ -216,7 +209,7 @@ using Microsoft.AspNetCore.Http;
             </div>
             <div class=""modal-body"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15545", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15352", async() => {
                     WriteLiteral("\r\n                    <div class=\"form-group\">\r\n                        <input class=\"form-control mr-sm-2\" type=\"text\" name=\"roleName\" Required placeholder=\"Введите новую роль\" />\r\n                    </div>\r\n                ");
                 }
                 );
@@ -233,7 +226,7 @@ using Microsoft.AspNetCore.Http;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd17202", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd17009", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -255,7 +248,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            <div class=\"modal-footer\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd18947", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd18754", async() => {
                     WriteLiteral("\r\n                    Добавить роль\r\n                ");
                 }
                 );

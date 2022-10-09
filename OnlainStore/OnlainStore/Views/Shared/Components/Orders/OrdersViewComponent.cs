@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Helpers;
-using Store;
+using Store_Memory;
 
 namespace OlineStore.Views.Shared.ViewComponents.CartViewComponents
 {

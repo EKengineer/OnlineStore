@@ -5,10 +5,6 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore", "OnlainStore\OnlineStore.csproj", "{326B4E7B-5734-4B20-849E-93BC9F03E2D4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{22159E80-5F37-49CB-9BC5-4FF53372D8BB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "domain\Store\Store.csproj", "{78E96990-F579-4522-A8A7-1424FDA8A817}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{08C24CF9-02CF-47CE-BF5D-11099E704308}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreMemory", "Infrastructure\Store,Memory\StoreMemory.csproj", "{F44AB4CB-605F-4003-AB15-78EF849A5193}"
@@ -23,10 +19,6 @@ Global
 		{326B4E7B-5734-4B20-849E-93BC9F03E2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326B4E7B-5734-4B20-849E-93BC9F03E2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326B4E7B-5734-4B20-849E-93BC9F03E2D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78E96990-F579-4522-A8A7-1424FDA8A817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78E96990-F579-4522-A8A7-1424FDA8A817}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78E96990-F579-4522-A8A7-1424FDA8A817}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78E96990-F579-4522-A8A7-1424FDA8A817}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F44AB4CB-605F-4003-AB15-78EF849A5193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F44AB4CB-605F-4003-AB15-78EF849A5193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44AB4CB-605F-4003-AB15-78EF849A5193}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,7 +28,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{78E96990-F579-4522-A8A7-1424FDA8A817} = {22159E80-5F37-49CB-9BC5-4FF53372D8BB}
 		{F44AB4CB-605F-4003-AB15-78EF849A5193} = {08C24CF9-02CF-47CE-BF5D-11099E704308}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
