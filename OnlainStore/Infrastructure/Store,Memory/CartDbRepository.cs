@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using Store;
+using Store_Memory;
 
 namespace Store_Memory
 {

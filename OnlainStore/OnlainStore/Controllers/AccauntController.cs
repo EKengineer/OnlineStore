@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OlineStore.Models;
-using Store;
+using Store_Memory;
 using System;
 
 namespace OlineStore.Controllers

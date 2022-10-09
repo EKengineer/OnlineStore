@@ -10,8 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.6",
-          "Store": "1.0.0"
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.6"
         },
         "runtime": {
           "StoreMemory.dll": {}
@@ -1082,11 +1081,6 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         }
-      },
-      "Store/1.0.0": {
-        "runtime": {
-          "Store.dll": {}
-        }
       }
     }
   },
@@ -1774,11 +1768,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "Store/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

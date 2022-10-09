@@ -1,4 +1,4 @@
-﻿using Store;
+﻿using Store_Memory;
 using System.ComponentModel.DataAnnotations;
 
 namespace OnlineStore.Areas.Admin.Modals

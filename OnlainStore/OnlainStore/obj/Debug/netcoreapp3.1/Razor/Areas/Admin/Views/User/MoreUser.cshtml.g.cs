@@ -40,13 +40,6 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
-using Store;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Store_Memory;
 
@@ -68,7 +61,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f", @"/Areas/Admin/Views/User/MoreUser.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a11f5182d4a1088deeaa1c6e6a5ab5a9464da4d", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_User_MoreUser : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<User>
     #nullable disable
@@ -209,7 +202,7 @@ using Microsoft.AspNetCore.Http;
                             <li><a class=""dropdown-item"" data-bs-toggle=""modal"" data-bs-target=""#changePassword"">Сменить пароль</a></li>
                             <li><a class=""dropdown-item"" data-bs-toggle=""mod");
             WriteLiteral("al\" data-bs-target=\"#editUser\">Редактирование</a></li>\r\n                            <li><a class=\"dropdown-item\" href=\"#\">Права доступа</a></li>\r\n                            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f14543", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f14350", async() => {
                 WriteLiteral("Удалить");
             }
             );
@@ -245,7 +238,7 @@ using Microsoft.AspNetCore.Http;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n                        </ul>\r\n                    </div>\r\n                </td>\r\n            </tr>\r\n        </tfoot>\r\n    </table>\r\n</div>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f17468", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f17275", async() => {
                 WriteLiteral("\r\n    <div class=\"modal-dialog\">\r\n        <div class=\"modal-content\">\r\n            <div class=\"modal-header\">\r\n                <h5 class=\"modal-title\" id=\"changePassword\">Сменить пароль</h5>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n");
 #nullable restore
 #line 77 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\User\MoreUser.cshtml"
@@ -265,7 +258,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n\r\n\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f18752", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f18559", async() => {
                     WriteLiteral("Сменить пароль");
                 }
                 );
@@ -323,7 +316,7 @@ using Microsoft.AspNetCore.Http;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f23429", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f23236", async() => {
                 WriteLiteral("\r\n    <div class=\"modal-dialog\">\r\n        <div class=\"modal-content\">\r\n            <div class=\"modal-header\">\r\n                <h5 class=\"modal-title\" id=\"editUser\">Редактирование данных</h5>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n");
 #nullable restore
 #line 98 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\User\MoreUser.cshtml"
@@ -343,7 +336,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n\r\n\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f24691", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4b0b0a1f8e5ddc99cbba97b9f9eb64ac0aa36f24498", async() => {
                     WriteLiteral("Внести изменения");
                 }
                 );
