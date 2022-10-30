@@ -1,7 +1,9 @@
 using LanguageExt;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,11 +12,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Serilog;
 using Store_Memory;
+using Store_Memory.models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using User = Store_Memory.models.User;
 
 namespace OnlainStore
 {
@@ -33,6 +37,22 @@ namespace OnlainStore
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(connection));
 
+            services.AddDbContext<IdentityContext>(options =>
+               options.UseSqlServer(connection));
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityContext>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromHours(8);
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.Cookie = new CookieBuilder
+                {
+                   IsEssential = true
+                };
+            });
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
             //services.AddSession(options => 
@@ -46,8 +66,6 @@ namespace OnlainStore
             services.AddTransient<IOrderRepositoty, OrderDbRepository>();
             services.AddTransient<IProductRepository, ProductDbRepository>();
             services.AddTransient<ICartRepositoty, CartDbRepository>();
-            services.AddSingleton<IRoleRepositoty, RoleRepository>();
-            services.AddSingleton<IUsersRepository, UsersRepository>();
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -75,6 +93,8 @@ namespace OnlainStore
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

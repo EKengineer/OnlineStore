@@ -28,7 +28,7 @@ namespace OnlineStore.Areas.Admin.Controllers
         {
             var roles = roleManager.Roles.ToList();
 
-            return View(roles);
+            return View(roles.Select(x=>new RoleViewModel { Name = x.Name}).ToList());
         }
 
         [HttpPost]

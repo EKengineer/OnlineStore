@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
 using OlineStore.Models;
+using OnlineStore.Areas.Admin.Modals;
 using OnlineStore.Models;
 using Store_Memory;
 using Store_Memory.models;
@@ -30,17 +31,6 @@ namespace OnlineStore.Helpers
             }
             return cartItems;
         }
-
-        public static UserViewModel ToUserViewModel(User user)
-        {
-            return new UserViewModel
-            {
-                Name = user.UserName,
-                Phone = user.PhoneNumber
-            };
-        }
-
-
 
 
         public static Order ToOrder(OrderViewModel order, List<CartItem> cartDbItems)

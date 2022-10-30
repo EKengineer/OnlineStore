@@ -26,14 +26,14 @@ namespace OnlineStore.Areas.Admin.Controllers
         public IActionResult Users()
         {
             var users = userManager.Users.ToList();
-            return View(users.Select(x => Mapping.ToUserViewModel(x)).ToList());
+            return View(users);
         }
 
         public IActionResult MoreUser(string name)
         {
             var user = userManager.FindByNameAsync(name).Result;
            
-            return View(Mapping.ToUserViewModel(user));
+            return View(user);
         }
       
 
