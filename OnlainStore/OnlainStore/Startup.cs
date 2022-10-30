@@ -66,8 +66,6 @@ namespace OnlainStore
             services.AddTransient<IOrderRepositoty, OrderDbRepository>();
             services.AddTransient<IProductRepository, ProductDbRepository>();
             services.AddTransient<ICartRepositoty, CartDbRepository>();
-            services.AddSingleton<IRoleRepositoty, RoleRepository>();
-            //services.AddSingleton<IUsersRepository, UsersRepository>();
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
