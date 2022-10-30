@@ -1,88 +1,90 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Couchbase.Management.Users;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using OlineStore.Models;
 using OnlineStore.Areas.Admin.Modals;
+using OnlineStore.Helpers;
 using Store_Memory;
+using Store_Memory.models;
+using System.Linq;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace OnlineStore.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area(Constants.AdminRoleName)]
+    [Authorize(Roles = Constants.AdminRoleName)]
     public class UserController : Controller
     {
-        private readonly IUsersRepository usersRepository;
+        private readonly UserManager<Store_Memory.models.User> userManager;
 
-        public UserController(IUsersRepository usersRepository)
+        public UserController(UserManager<Store_Memory.models.User> userManager)
         {
-            this.usersRepository = usersRepository;
+            this.userManager = userManager;
         }
         public IActionResult Users()
         {
-            var users = usersRepository.GetAllUsers();
-
-            return View(users);
+            var users = userManager.Users.ToList();
+            return View(users.Select(x => Mapping.ToUserViewModel(x)).ToList());
         }
 
         public IActionResult MoreUser(string name)
         {
-            var user = usersRepository.GetByEmail(name);
-            return View(user);
+            var user = userManager.FindByNameAsync(name).Result;
+           
+            return View(Mapping.ToUserViewModel(user));
         }
-        //public IActionResult ChangePassword(string name)
-        //{
-        //    var changePassword = new ChangePassword() { Name = name };
-
-        //    return View(changePassword);
-        //}
+      
 
         [HttpPost]
-        public IActionResult ChangePassword(int userId, ChangePassword changePassword)
+        public IActionResult ChangePassword(string name, ChangePassword changePassword)
         {
-            var user = usersRepository.GetById(userId);
+            var user = userManager.FindByNameAsync(name).Result;
 
 
-            if (user.Email == changePassword.Password)
+            if (user.UserName == changePassword.Password)
             {
                 ModelState.AddModelError("", "Логин и пароль не должны совпадать!");
             }
             if (ModelState.IsValid)
             {
-                if (changePassword.Password == changePassword.ConfirmPassword)
-                {
-                    usersRepository.ChangePassword(user.Email, changePassword.Password);
-                    return RedirectToAction("Users", "User");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Пароли не совпадают!");
-                }
-            }
+                var newHashPassword = userManager.PasswordHasher.HashPassword(user, changePassword.Password);
+                user.PasswordHash = newHashPassword;
+                userManager.UpdateAsync(user).Wait();
+                return RedirectToAction("Users", "User");
+            } 
             return RedirectToAction("Users", "User");
         }
 
-         public IActionResult RemoveUser(string email)
+         public IActionResult RemoveUser(string name)
         {
-            usersRepository.Remove(email);
-
+            var user = userManager.FindByNameAsync(name).Result;
+            userManager.DeleteAsync(user).Wait();
             return RedirectToAction("Users", "User");
         }
 
-        [HttpPost]
-        public IActionResult EditUser(int userId, EditUser editUser)
-        {
-            var user = usersRepository.GetById(userId);
+        //[HttpPost]
+        //public IActionResult EditUser(string name, EditUser editUser)
+        //{
+        //    var user = userManager.FindByNameAsync(name).Result;
 
-            if (editUser.Email == null)
-            { editUser.Email = user.Email; }
-            if (editUser.Phone == null)
-            { editUser.Phone = user.Phone; }
-            if (editUser.Name == null) 
-            { editUser.Name = user.Name; }
-            if (editUser.Address == null)
-            { editUser.Address = user.Address; }
-
-                usersRepository.EditUser(userId, editUser.Email, editUser.Phone, editUser.Name, editUser.Address);
-
-            return RedirectToAction("Users", "User");
-        }
+        //    if (editUser.Email == null)
+        //    {
+        //        var changeEmailTokenAsync = userManager.GenerateChangeEmailTokenAsync(user, editUser.Email);
+        //        userManager.ChangeEmailAsync(user, editUser.Email, changeEmailTokenAsync.Result); 
+        //    }
+        //    if (editUser.Phone == null)
+        //    {
+        //        userManager.ChangePhoneNumberAsync();
+        //    }
+        //    if (editUser.Name == null) 
+        //    { editUser.Name = user.UserName; }
+        //    if (editUser.Address == null)
+        //    { editUser.Address = user.Address; }
+            
+               
+        //    return RedirectToAction("Users", "User");
+        //}
     }
 }

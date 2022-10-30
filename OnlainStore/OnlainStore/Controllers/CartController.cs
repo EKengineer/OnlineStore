@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Helpers;
 using Store_Memory;
+using Store_Memory.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace OlineStore.Controllers
 {
+    [Authorize]
     public class CartController : Controller
     {
         private readonly IProductRepository productRepository;

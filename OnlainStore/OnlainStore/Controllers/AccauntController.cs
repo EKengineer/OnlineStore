@@ -1,28 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using OlineStore.Models;
+using Store_Memory.models;
 using Store_Memory;
-using System;
 
 namespace OlineStore.Controllers
 {
     public class AccauntController : Controller
-    {
-        private readonly IUsersRepository usersRepository;
+    { 
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public AccauntController(IUsersRepository usersRepository)
+        public AccauntController( UserManager<User> userManager, SignInManager<User> signInManager)
         {
-            this.usersRepository = usersRepository;
+            _signInManager = signInManager;
+            _userManager = userManager;
         }
 
         [HttpPost]
         public IActionResult SignIn(OlineStore.Models.SignIn signIn)
         {
-            var user = usersRepository.GetByEmail(signIn.UserName);
-            if (user != null)
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                var result = _signInManager.PasswordSignInAsync(signIn.UserName, signIn.Password, signIn.RememberMe, false).Result;
+                if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Неверный пароль");
+                    return RedirectToAction("Index", "123");
                 }
             }
 
@@ -34,29 +44,29 @@ namespace OlineStore.Controllers
         public IActionResult SignUp(SignUp signUp)
         {
 
-            var user = usersRepository.GetByEmail(signUp.UserName);
-
-            if (user == null)
-            {
+            
                 if (signUp.UserName == signUp.Password)
                 {
                     ModelState.AddModelError("", "Логин и пароль не должны совпадать!");
                 }
                 if (ModelState.IsValid)
                 {
-                    if (signUp.Password == signUp.ConfirmPassword)
-                    {
-                        usersRepository.Create(signUp.UserName, signUp.Password);
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else
-                    {
+                  User user = new User { Email = signUp.UserName, UserName = signUp.UserName };
+
+                var result = _userManager.CreateAsync(user, signUp.Password).Result;
+                    
                         ModelState.AddModelError("", "Пароли не совпадают!");
-                    }
+                    
                 }
-            }
+            
 
            
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync().Wait();
             return RedirectToAction("Index", "Home");
         }
     }

@@ -1,12 +1,15 @@
 ﻿using LanguageExt.ClassInstances;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Areas.Admin.Modals;
 using Store_Memory;
+using Store_Memory.models;
 using System.Xml.Serialization;
 
 namespace OnlineStore.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area(Constants.AdminRoleName)]
+    [Authorize(Roles = Constants.AdminRoleName)]
     public class ProductController : Controller
     {
         private readonly IProductRepository productRepository;

@@ -16,7 +16,7 @@
             <tr>
                 <td class="col-2" scope="col">ФИО</td>
                 <th class="col-2" scope="col"></th>
-                <th class="col-2" scope="col">@Model.Name</th>
+                <th class="col-2" scope="col">@Model.UserName</th>
                 <td class="col-2" scope="col"></td>
                 <td class="col-2" scope="col"></td>
             </tr>
@@ -30,7 +30,7 @@
             <tr>
                 <td class="col-2" scope="col">Телефон</td>
                 <th class="col-2" scope="col"></th>
-                <th class="col-2" scope="col">@Model.Phone</th>
+                <th class="col-2" scope="col">@Model.PhoneNumber</th>
                 <td class="col-2" scope="col"></td>
                 <td class="col-2" scope="col"></td>
             </tr>
@@ -58,7 +58,7 @@
                             <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changePassword">Сменить пароль</a></li>
                             <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editUser">Редактирование</a></li>
                             <li><a class="dropdown-item" href="#">Права доступа</a></li>
-                            <li><a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="RemoveUser" asp-route-Email="@Model.Name">Удалить</a></li>
+                            <li><a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="RemoveUser" asp-route-name="@Model.UserName">Удалить</a></li>
                         </ul>
                     </div>
                 </td>
@@ -82,7 +82,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="ChangePassword" asp-route-userId="@Model.Id">Сменить пароль</button>
+                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="ChangePassword" asp-route-name="@Model.UserName">Сменить пароль</button>
             </div>
         </div>
     </div>
@@ -103,7 +103,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="EditUser" asp-route-userId="@Model.Id">Внести изменения</button>
+                <button type="submit" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="EditUser" asp-route-name="@Model.UserName">Внести изменения</button>
             </div>
         </div>
     </div>

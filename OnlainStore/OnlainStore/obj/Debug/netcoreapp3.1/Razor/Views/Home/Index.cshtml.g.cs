@@ -40,6 +40,13 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
+#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
+using Store_Memory.models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
@@ -61,7 +68,7 @@ using System;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aa8bba19ef52c4096162b86d2d28589b0e02bb0d", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d48207392e75275b07f27e9924040588663cf851", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Product>>
     #nullable disable
@@ -119,7 +126,7 @@ WriteAttributeValue("", 213, product.Link, 213, 13, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" />\r\n            <div class=\"card-body\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa8bba19ef52c4096162b86d2d28589b0e02bb0d7399", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa8bba19ef52c4096162b86d2d28589b0e02bb0d7594", async() => {
                 WriteLiteral("\r\n                    <h5>");
 #nullable restore
 #line 18 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\Home\Index.cshtml"
@@ -171,7 +178,7 @@ WriteAttributeValue("", 213, product.Link, 213, 13, false);
 #line hidden
 #nullable disable
             WriteLiteral(" руб </h5>\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa8bba19ef52c4096162b86d2d28589b0e02bb0d10600", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa8bba19ef52c4096162b86d2d28589b0e02bb0d10795", async() => {
                 WriteLiteral("В корзину");
             }
             );
