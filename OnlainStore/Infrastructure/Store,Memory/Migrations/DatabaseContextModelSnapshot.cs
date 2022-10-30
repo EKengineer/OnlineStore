@@ -112,6 +112,32 @@ namespace Store_Memory.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Cost = 125000m,
+                            Description = "512 gb",
+                            Link = "/images/image1.jpg",
+                            Name = "Iphone 13 Pro Max"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Cost = 55000m,
+                            Description = "Video game console",
+                            Link = "/images/image2.jpg",
+                            Name = "Sony PS5"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Cost = 1500m,
+                            Description = "Literary work by the Russian author Leo Tolstoy",
+                            Link = "/images/image3.jpg",
+                            Name = "War and Peace"
+                        });
                 });
 
             modelBuilder.Entity("Store_Memory.UserDeliveryInfo", b =>

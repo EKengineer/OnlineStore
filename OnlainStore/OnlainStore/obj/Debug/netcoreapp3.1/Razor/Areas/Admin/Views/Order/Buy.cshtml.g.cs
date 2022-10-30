@@ -40,28 +40,35 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Store_Memory;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using System;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+using Store_Memory.models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2f97eabbbb7509c339b13fa7cfac7d87538375c", @"/Areas/Admin/Views/Order/Buy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68315c781a9969bd56e8eb0d30237cdf9f02012b", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_Order_Buy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<OrderViewModel>
     #nullable disable

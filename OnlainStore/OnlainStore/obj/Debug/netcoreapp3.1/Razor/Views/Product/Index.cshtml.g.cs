@@ -40,6 +40,13 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
+#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
+using Store_Memory.models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
@@ -61,7 +68,7 @@ using System;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fb9d3df5ca1831c0ef91ce309784ac110db77b7", @"/Views/Product/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d48207392e75275b07f27e9924040588663cf851", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Product_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     #nullable disable

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Store_Memory;
-using Store_Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -40,28 +40,35 @@ using OlineStore;
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Store_Memory;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 6 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using System;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "C:\Users\ek\source\repos\OnlineStore\OnlainStore\OnlainStore\Areas\Admin\Views\_ViewImports.cshtml"
+using Store_Memory.models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7390db5573e15745604a25282f2eb2a34ad904fd", @"/Areas/Admin/Views/Role/Roles.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58bf4fe43b087d9ecb0adc724b8725102fb54741", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68315c781a9969bd56e8eb0d30237cdf9f02012b", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_Role_Roles : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Role>>
     #nullable disable
@@ -140,7 +147,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                    <th class=\"col-2\" scope=\"col\"></th>\r\n                    <th class=\"col-2\" scope=\"col\"></th>\r\n                    <td class=\"col-2\" scope=\"col\"></td>\r\n                    <td class=\"col-2\" scope=\"col\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd11188", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd11395", async() => {
                 WriteLiteral("\r\n                        Удалить роль\r\n                        ");
             }
             );
@@ -200,7 +207,7 @@ using Microsoft.AspNetCore.Http;
 
 
 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd14820", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15027", async() => {
                 WriteLiteral(@"
     <div class=""modal-dialog"">
         <div class=""modal-content"">
@@ -209,7 +216,7 @@ using Microsoft.AspNetCore.Http;
             </div>
             <div class=""modal-body"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15352", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd15559", async() => {
                     WriteLiteral("\r\n                    <div class=\"form-group\">\r\n                        <input class=\"form-control mr-sm-2\" type=\"text\" name=\"roleName\" Required placeholder=\"Введите новую роль\" />\r\n                    </div>\r\n                ");
                 }
                 );
@@ -226,7 +233,7 @@ using Microsoft.AspNetCore.Http;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd17009", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd17216", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -248,7 +255,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            <div class=\"modal-footer\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd18754", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7390db5573e15745604a25282f2eb2a34ad904fd18961", async() => {
                     WriteLiteral("\r\n                    Добавить роль\r\n                ");
                 }
                 );
