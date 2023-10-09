@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {}
+    "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+    "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "projectUniqueName": "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
         "projectName": "StoreMemory",
-        "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
-        "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
+        "projectPath": "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj",
+        "packagesPath": "C:\\Users\\kei.V4-KEI\\.nuget\\packages\\",
+        "outputPath": "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kei.V4-KEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

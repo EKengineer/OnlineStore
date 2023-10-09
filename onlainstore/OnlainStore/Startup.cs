@@ -35,14 +35,7 @@ namespace OnlainStore
 
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
-            //services.AddSession(options => 
-            //{
-            //    //Время жизни сессии
-            //    options.IdleTimeout = TimeSpan.FromMinutes(20);
-            //    //Доступ к кукам только у сервера(защита от атак)
-            //    options.Cookie.HttpOnly = true;
-            //    options.Cookie.IsEssential = true;
-            //});
+         
             services.AddTransient<IOrderRepositoty, OrderDbRepository>();
             services.AddTransient<IProductRepository, ProductDbRepository>();
             services.AddTransient<ICartRepositoty, CartDbRepository>();

@@ -10202,19 +10202,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ek\\.nuget\\packages\\": {}
+    "C:\\Users\\kei.V4-KEI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
+      "projectUniqueName": "H:\\EKgit\\1\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
       "projectName": "OnlineStore",
-      "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
-      "packagesPath": "C:\\Users\\ek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\OnlainStore\\obj\\",
+      "projectPath": "H:\\EKgit\\1\\OnlainStore\\OnlainStore\\OnlineStore.csproj",
+      "packagesPath": "C:\\Users\\kei.V4-KEI\\.nuget\\packages\\",
+      "outputPath": "H:\\EKgit\\1\\OnlainStore\\OnlainStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kei.V4-KEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10228,8 +10228,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
-              "projectPath": "C:\\Users\\ek\\source\\repos\\OnlineStore\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
+            "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj": {
+              "projectPath": "H:\\EKgit\\1\\OnlainStore\\Infrastructure\\Store,Memory\\StoreMemory.csproj"
             }
           }
         }
@@ -10306,7 +10306,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
